@@ -346,6 +346,13 @@ Introduced in the Simula language in the 1960s, it gained widespread interest in
 
 Contrast with [Functional Programming](#functional-programming). Many programming languages combine elements of FP and OOP.
 
+
+### OODA Loop
+
+A method of action, where you constantly perform the loop - Observe, Orient, Decide, Act. Originally developed for combat operations, it has been applied in other areas, such as industrial applications, project assessment, etc.
+
+The [Wikipedia page](https://en.wikipedia.org/wiki/OODA_loop){:target="ooda"} has a history and more details about OODA. It was originally developed by [United States Air Force Colonel John Boyd](https://en.wikipedia.org/wiki/John_Boyd_(military_strategist)){:target="john-boyd"} for combat operations, it has been applied in other areas, such as industrial applications, project assessment, etc.
+
 ## P
 
 ### Paradigm
