@@ -13,11 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "MICROSITE_TITLE"
+title: AI Alliance Glossary
 email: contact@thealliance.ai
 description: >- # this means to ignore newlines until "baseurl:"
-  The website for the AI Alliance project, MICROSITE_TITLE.
-baseurl: "/REPO_NAME" # the subpath of your site.
+  A shared glossary across all AI Alliance websites and assets.
+baseurl: "/glossary" # the subpath of your site.
 url: "https://the-ai-alliance.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
@@ -70,9 +70,13 @@ aux_links:
     - "https://thealliance.ai"
 
 nav_external_links:
-  - title: "The AI Alliance repo for MICROSITE_TITLE"
-    url: "https://github.com/The-AI-Alliance/REPO_NAME"
+  - title: The AI Alliance Repo for AI Alliance Glossary"
+    url: "https://github.com/The-AI-Alliance/glossary"
     hide_icon: false
+
+# Added by AI Alliance: a glossary URL, which in this case is internal
+# to this site!
+glossaryurl: /glossary
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
@@ -94,24 +98,27 @@ back_to_top_text: "Back to the top"
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
 last_edit_time_format: "%Y-%m-%d %H:%M %z" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
-last_modified_timestamp: TIMESTAMP
-last_version: V0.1.0
+last_modified_timestamp: 2025-10-24
+last_version: 0.1.0
 
 # Custom: Add the range of years for the copyright here. This is done here,
 # rather than default.html, so that the latter file can remain completely 
 # generic across repos, but the range of years can be configurable per repo.
-copyright_years: 2025
+copyright_years: 2024-2025
 
 # "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/The-AI-Alliance/REPO_NAME" # the github URL for your repo
-gh_edit_branch: "PUBLISH_BRANCH" # the branch that your docs are served from
+gh_edit_repository: "https://github.com/The-AI-Alliance/glossary" # the github URL for your repo
+gh_edit_branch: "main" # the branch that your docs are served from
 gh_edit_source: "docs" # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 
 # Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
 color_scheme: nil
+
+# Show the "contribute dataset" button
+show_contribute_dataset_button: true
 
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
