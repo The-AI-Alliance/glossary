@@ -39,6 +39,10 @@ However, it is desirable to make them automated, in which case all operations wi
 
 See also [Test](#test), [Unit Test](#unit-test), [Unit Benchmark](#unit-benchmark), [Integration Test](#integration-test), [Integration Benchmark](#integration-benchmark), [Acceptance Test](#acceptance-test), and [Acceptance Benchmark](#acceptance-benchmark).
 
+## Accountability
+
+An aspect of [Governance](#governance), where we trace behaviors through [AI Systems](#ai-system) to their causes. Related is the need for organizations to take responsibility for the behaviors of the AI systems they deploy.
+
 ## Adaptation
 
 A general term used by [Nathan Lambert]({{site.baseurl}}/references/#nathan-lambert) for the addition [Tuning](#tuning) performed on a [Trained](#trained) [Generative AI Model](#generative-ai-model) to improve its [Alignment](#alignment) for user goals, like better domain-specific awareness, instruction following, and awareness of social norms, etc.
@@ -57,7 +61,11 @@ Umbrella term for an application or system with AI [Components](#component), inc
 
 ## Alignment
 
-A general term for how well an [AI System's](#ai-system) outputs (e.g., replies to queries) and [Behaviors](#behavior) correspond to end-user and service provider objectives, including the quality and utility of results, as well as safety requirements. Quality implies factual correctness and utility implies the results are fit for purpose, e.g., a Q&A system should answer user questions concisely and directly, a Python code-generation system should output valid, bug-free, and secure Python code. [EleutherAI]({{site.baseurl}}/references/#eleuther-ai){:target="eleuther"} defines alignment [this way](https://www.eleuther.ai/alignment){:target="eleuther"}, &ldquo;Ensuring that an artificial intelligence system behaves in a manner that is consistent with human values and goals.&rdquo; See also the work of the [Alignment Forum]({{site.baseurl}}/references/#alignment-forum).
+A general term for how well an [AI System's](#ai-system) outputs (e.g., replies to queries) and [Behaviors](#behavior) correspond to end-user and service provider objectives, including the quality and utility of results, as well as safety requirements. Quality implies factual correctness and utility implies the results are fit for purpose, e.g., a Q&A system should answer user questions concisely and directly, a Python code-generation system should output valid, bug-free, and secure Python code. [EleutherAI]({{site.baseurl}}/references/#eleuther-ai){:target="eleuther"} defines alignment [this way](https://www.eleuther.ai/alignment){:target="eleuther"}, &ldquo;Ensuring that an artificial intelligence system behaves in a manner that is consistent with human values and goals.&rdquo; See also the work of the [Alignment Forum](https://www.alignmentforum.org/){:target="alignment-forum"}.
+
+## Annotation
+
+[\[1\]](#mlc) External data that complements a [Data Set](#data-set), such as labels that classify individual items.
 
 ## Automatable
 
@@ -84,6 +92,10 @@ See also [Unit Benchmark](#unit-benchmark), [Integration Benchmark](#integration
 ## Class
 
 The primary [Component](#component) abstraction in [Object-Oriented Programming](#object-oriented-programming), although not necessarily the only one.
+
+## Classifier
+
+A model or other tool that analyzes data and outputs one or more _labels_ about its content. An email _SPAM_ filter is an example, where an email is labeled either _SPAM_ or _not SPAM_.
 
 ## Coding Agent
 
@@ -120,6 +132,10 @@ Does a [Component](#component) feel like &ldquo;one thing&rdquo; with a single p
 
 How closely connected is one [Component](#component) to others in the system? &ldquo;Loose&rdquo; coupling is preferred, because it makes it easier to test components in isolation, substitute replacements when needed, etc. Strongly coupled components often indicate poor abstraction boundaries between them.
 
+## Cybersecurity
+
+[Security](#security) of software systems, including data protection and allowed use. [Prompt Injection](#prompt-injection) is an example of a new class of [Risks](#risk) introduced by [Generative AI Models](#generative-ai-models).
+
 ## Design by Contract
 
 [Design by Contract](https://en.wikipedia.org/wiki/Design_by_contract){:target="_wikipedia"} (&ldquo;DbC&rdquo;) is an idea developed by [Bertrand Meyer](https://en.wikipedia.org/wiki/Bertrand_Meyer){:target="_wikipedia"} and incorporated into his [Eiffel](https://en.wikipedia.org/wiki/Eiffel_(programming_language)){:target="_wikipedia"} programming language. In Eiffel all functions can define a _contract_ for allowed inputs, invariants, and guaranteed responses, if the input requirements are met. The runtime system would handle any failures of these contracts. A _core principle_ of DbC use is that contract failures should terminate the application immediately, forcing the developers to fix the issue. Failure to do so becomes an excuse to let bugs accumulate. If this principle was rigorously followed during development, it is often considered acceptable (or at least &ldquo;expedient&rdquo;), to log contract failures, but not terminate execution in production runs. DbC can be used in other languages through built-in features (like _assertions_), libraries, or various runtime features.
@@ -142,17 +158,19 @@ Can humans understand why the system behaves the way that it does in a particula
 
 ## Evaluation
 
-Much like other software, models and AI systems need to be trusted and useful to their users. Evaluation aims to provide the evidence needed to gain users’ confidence for an [AI System](#ai-system).
+Much like other software, models and AI systems need to be trusted and useful to their users. Evaluation aims to provide the evidence needed to gain confidence for an [AI System](#ai-system) and its [Components](#component).
 
-An particular evaluation is the capability of measuring and quantifying how a [Generative AI Model](#generative-ai-model), e.g., an [LLM](#large-language-model), or an [AI System](#ai-system) as a whole handles [Prompts](#prompt) and the kinds of [Responses](#response) produced. For example, an evaluation might be used to see if hate speech is detected in prompts and responses, if responses contain hallucinations, measure the overhead (time and compute) for processing, and for our purposes, implements a required [Use Case]({{site.glossaryurl}}/#use-case), etc.
+A particular evaluation is the capability of measuring and quantifying how a [Generative AI Model](#generative-ai-model), e.g., an [LLM](#large-language-model), or an [AI System](#ai-system) as a whole handles [Prompts](#prompt) and the kinds of [Responses](#response) produced. For example, an evaluation might be used to see if hate speech is detected in prompts and responses, if responses contain hallucinations, measure the overhead (time and compute) for processing, and for our purposes, implements a required [Use Case]({{site.glossaryurl}}/#use-case), etc.
 
-An evaluation may be implemented in one of several ways. A _classifier_ [LLM](#large-language-model) or another kind of model might be used to score content. A [Data Set](#data-set) of examples is commonly used. For our purposes, an implementation is API compatible for execution within an [Evaluation Framework](#evaluation-framework). 
+So, an evaluation can cover functional and nonfunctional behaviors of models and systems. They may be used throughout the AI application development and deployment lifecycle. Functional evaluation dimensions include alignment to use cases, accuracy in responses, faithfulness to given context, robustness against perturbations and noise, and adherence to safety and social norms. Nonfunctional evaluation dimensions include latency, throughput, compute efficiency, cost to execute, carbon footprint and other sustainability concerns. Evaluations are applied as regression tests while models are trained and fine-tuned, as benchmarks while GenAI-powered applications are designed and developed, and as [Guardrails](#guardrails) when these applications are deployed in production. They also have a role in compliance, both with specific industry regulations, and with emerging government policies. 
+
+An evaluation may be implemented in one of several ways. A [Classifier](#classifier) [LLM](#large-language-model) or another kind of model might be used to label content. In general, evaluations often include a [Data Set](#data-set) of examples used to [Train](#training) a model for purposes like classification, or the data set can be used to query a model and score the quality of the responses. For our purposes, an implementation of an evaluation is API compatible for execution within an [Evaluation Framework](#evaluation-framework). 
 
 See also [Evaluation Framework](#evaluation-framework).
 
 ## Evaluation Framework
 
-An umbrella term for the software tools, runtime services, benchmark systems, etc. used to perform [Evaluations](#evaluation) by running their implementations to measure [AI systems](#ai-system) for trust and safety risks and mitigations, and other concerns.
+An umbrella term for the software tools, runtime services, benchmark systems, etc. used to perform [Evaluations](#evaluation) by running their implementations to measure [AI systems](#ai-system) for trust and safety risks and mitigations, and other concerns. See, for example, The AI Alliance [Evaluation Reference Stack](https://the-ai-alliance.github.io/eval-ref-stack/){:target="ers"}.
 
 ## Fairness
 
@@ -160,15 +178,15 @@ Does the [AI system's](#ai-system) responses exhibit social biases, preferential
 
 ## Feature
 
-For our purposes, a small bit of functionality provided by an application. It is the increment of change in a single cycle of the [Test-Driven Development](#test-driven-development) process, which could be enhancing some user-visible functionality or adding new functionality in small increments. See also [Use Case](#use-case)
+For our purposes, a small bit of functionality provided by a [Component](#component) and the [AI Systems](#ai-systems) that use it. A feature is the increment of change in a single cycle of the [Test-Driven Development](#test-driven-development) process, which could be enhancing some user-visible functionality or adding wholly-new new functionality in small increments. See also [Use Case](#use-case).
 
 ## Fine Tuning
 
-A more specific term for [Tuning](#tuning), a part of [Post-training](#post-training), that emphasizes that after the major learning has happened during [Pre-training](#pre-training), the model behavior is refined and improved with additional training techniques.
+A more specific term for [Tuning](#tuning), a part of [Post-training](#post-training), that emphasizes that after the major learning has happened during [Pre-training](#pre-training), the model behavior is refined and improved with additional training techniques. See also [Supervised Fine Tuning](#supervised-fine-tuning).
 
 ## Function
 
-In most languages, the most fundamental [Unit](#unit) of abstraction and execution. Depending on the language, the term _function_ or _method_ might be used, where the latter are special functions associated with [Classes](#class) in [OOP](#object-oriented-programming) languages. Some languages allow code blocks outside of functions, perhaps inside alternative [Component](#component) boundaries, but this is not important for our purposes. 
+In most languages, the most fundamental [Unit](#unit) of abstraction and execution. Depending on the language, the term _function_ or _method_ might be used, where the latter term refers to functions associated with [Classes](#class) in [OOP](#object-oriented-programming) languages. Some languages allow code blocks outside of functions, perhaps inside alternative [Component](#component) boundaries, but this is not important for our purposes. 
 
 Many functions are free of [Side Effects](#side-effect), meaning they don't read or write [State](#state) external to the function and shared by other functions. These functions are _always_ [Deterministic](#determinism); for a given input(s) they always return the same output. This is a very valuable property for design, testing, and reuse.
 
@@ -181,6 +199,10 @@ FP is a design methodology that attempts to formalize the properties of [Functio
 FP became popular when concurrent software became more widespread in the 2000s, because the immutable objects lead to far fewer concurrency bugs. FP languages may have other [Component](#component) constructs for grouping of functions, e.g., into _libraries_.
 
 Contrast with [Object-Oriented Programming](#object-oriented-programming). Many programming languages combine aspects of FP and OOP.
+
+## Guardrails
+
+A frequently-used term for inference-time use of [Evaluations](#evaluation) to detect and mitigate usage of the [AI System](#ai-system) that is considered unsafe or otherwise outside the terms of use.
 
 ## Generative Adversarial Networks
 
@@ -202,7 +224,11 @@ A combination of data and code, usually trained on a [Data Set](#data-set), to s
 
 For convenience, in the text, we use the shorthand term _model_ to refer to the generative AI [Component](#component) that has [Nondeterministic](#determinism) [Behavior](#behavior), whether it is a model invoked directly through an API in the same application or invoked by calling another service (e.g., ChatGPT). The goal of this project is to better understand how developers can test models.
 
-See also [Large Language Model](#large-language-model) (LLMs) and [Multimodal Model](#multimodal-models).
+See also [Model](#model), [Large Language Model](#large-language-model) (LLMs), and [Multimodal Model](#multimodal-model).
+
+## Governance
+
+End-to-end control of assets, especially [Data Sets](#Data Set) and [Models](#model), with lineage traceability and access controls for protecting the security and integrity of assets.
 
 ## Hallucination
 
@@ -218,7 +244,7 @@ Sending information to a [Generative AI Model](#generative-ai-model) or [AI Syst
 
 ## Instruction Fine Tuning
 
-Often abbreviated _IFT_. A form of [Supervised Fine Tuning](#supervised-fine-tuning) that uses a [Labeled Data](#labeled-data) set of instruction prompts and responses. It is designed to improve model performance for specific tasks and for following instructions in general. See also [Tuning](#tuning).
+Often abbreviated _IFT_. A form of [Supervised Fine Tuning](#supervised-fine-tuning) that uses a [Labeled Data](#labeled-data) set of instruction prompts and responses. It is designed to improve model performance for specific tasks and for following instructions, in general, such as [Question Answering](#question-answering). See also [Tuning](#tuning).
 
 ## Integration Benchmark
 
@@ -234,20 +260,28 @@ See also [Test](#test), [Unit Test](#unit-test), [Unit Benchmark](#unit-benchmar
 
 ## Labeled Data
 
-Labeled data contains content used to train a model and corresponding _labels_ of expected outcomes. A classic example is a labeled data set for [Training](#training) a SPAM filter, where example emails are labeled SPAM or not SPAM. In contrast, [Unlabeled Data](#unlabeled-data) contains no such labels. Labeled data is used in model [Tuning](#tuning), while sets of unlabeled data are used for training raw [Generative AI Models](#generative-aI-models). 
+Labeled data contains content used to train a model and corresponding _labels_ of expected outcomes. A classic example is a labeled data set for [Training](#training) a SPAM filter, where example emails are labeled SPAM or not SPAM. In contrast, [Unlabeled Data](#unlabeled-data) contains no such labels. Labeled data is used in model [Tuning](#tuning), while sets of unlabeled data are used for training raw [Generative AI Models](#generative-ai-models). 
 
-In the context of [Generative AI Models](#generative-aI-models), there are several popular formats for labeled data:
+In the context of [Generative AI Models](#generative-ai-models), there are several popular formats for labeled data:
 
 * **Question and answer (Q&A) pairs:** A prompt, such as a question or an instruction to do something, is accompanied by an answer to the question or an expected response to the instruction.
 * **Preference data:** Similar to Q&A pairs, but in addition to the _preferred_ or _chosen_ answer, a _rejected_ answer is provided, which supports teaching about responses that are good as well as bad.
 
 ## Large Language Model
 
-Abbreviated _LLM_, a state of the art [Generative AI Model](#generative-ai-model), often with billions of parameters, that has the ability to summarize, classify, and even generate text in one or more spoken and programming languages. See also [Multimodal Model](#multimodal-model).
+Abbreviated _LLM_, a state of the art [Generative AI Model](#generative-ai-model), often with billions of parameters, that has the ability to summarize, classify, and even generate text in one or more spoken and programming languages. See also [Model](#model) and [Multimodal Model](#multimodal-model).
+
+## Model
+
+A combination of data and code, usually trained on a [Data Set](#Data Set), to support [Inference](#inference) of some kind. See also [Generative AI Model](#generative-ai-model), [Large Language Model](#large-language-model), and [Multimodal Model](#multimodal-model).
 
 ## Model Context Protocol
 
 Abbreviated MCP, a de-facto standard for communications between models, agents, and other tools. See [_modelcontextprotocol.io_](https://modelcontextprotocol.io/introduction){:target="_blank"} for more information.
+
+## Multimodal Model
+
+[Generative AI Model](#generative-ai-model) that extend the text-based capabilities of [LLMs](#large-language-model) with additional support for other media, such as video, audio, still images, or other kinds of data. See also [Model](#model).
 
 ## Object-Oriented Programming
 
@@ -277,6 +311,10 @@ In the context of software, the quality that knowing a [Unit's](#unit) or [Compo
 
 See [Training](#training). A more precise term in the context of [Generative AI Model](#generative-ai-model) training, where pre-training uses massive datasets to teach models from scratch, followed by a [Post-training](#post-training) ([Tuning](#tuning)) process to refine the behaviors as needed.
 
+## Privacy
+
+Protection of individuals’ sensitive data and preservation of their rights.
+
 ## Post-training
 
 See [Tuning](#tuning). A more precise term in the context of [Generative AI Model](#generative-ai-model) training, where [Pre-training](#pre-training) uses massive datasets to teach models from scratch, followed by a ost training (tuning) process to refine the behaviors as needed.
@@ -295,7 +333,11 @@ The query a user (or another system) sends to an [LLM](#large-language-model). O
 
 ## Prompt Engineering
 
-A term for the careful construction of good [Prompts](#prompt) to maximize the quality of [Inference](#inference) responses. It is really considered more _art_ than _science_ or _engineering_ because of the subjective relationship between prompts and responses for [Generative AI Models](#generative-ai-model).
+A term for the careful construction of good [Prompts](#prompt) to maximize the quality of [Inference](#inference) responses. It is really considered more _art_ than _science_ or _engineering_ because of the subjective relationship between prompts and responses for [Generative AI Models](#generative-ai-model). See also [Prompt Injection](#prompt-injection).
+
+## Prompt Injection
+
+A term for inserting content into [Prompts](#prompt) that triggers undesirable behaviors. This is a new [Cybersecurity](#cybersecurity) threat introduced by [AI Systems](#ai-systems), [Generative AI Models](#generative-ai-models), in particular.
 
 ## Property-Based Testing
 
@@ -306,6 +348,10 @@ All libraries that support PBT let you define the properties that must hold and 
 Property-based testing emerged in the [Functional Programming](#functional-programming) community.
 
 See also [Design by Contract](#design-by-contract), [Specification-Driven Development](#specification-driven-development), [Behavior-Driven Development](#behavior-driven-development), and [Test-Driven Development](#test-driven-development).
+
+## Question Answering
+
+In many, if not most applications, models and the applications that use them should be good at providing focused, useful answers to user questions, rather than generating text that might be related to the topic, but not useful to the user. [Instruction Fine Tuning](#instruction-fine-tuning) focuses on improving this capability.
 
 ## Refactoring
 
@@ -318,8 +364,6 @@ When an unexpected [Behavior](#behavior) change is introduced into a previously-
 Automated [Tests](#test) are designed to catch regressions as soon as they occur, making it easier to diagnose the change that caused the regression, as well as detecting the regression in the first place.
 
 ## Reinforcement Fine Tuning
-
-TODO. 
 
 See the discussion of [Reinforcement Fine Tuning]({{site.baseurl}}/future-ideas/from-testing-to-tuning/#reinforcement-fine-tuning) in [From Testing to Tuning]({{site.baseurl}}/future-ideas/from-testing-to-tuning/). 
 
@@ -345,6 +389,10 @@ A [Reinforcement Learning](#reinforcement-learning) approach for LLMs where the 
 
 If an action, like running a test, is run repeatedly with no code or data changes, does it return the same results every time? By design, [Generative AI Models](#generative-ai-model) are _expected_ to return different results each time a query is repeated.
 
+## Responsible AI
+
+(See also [\[2\]](#nist)) An umbrella term about comprehensive approaches to safety, accountability, and equitability. It covers an organization’s professional responsibility to address concerns. It can encompass tools, models, people, processes, integrated systems, and data.
+
 ## Retrieval-augmented Generation
 
 RAG was one of the first AI-specific design patterns for applications. It uses one or more data stores with information relevant to an application's use cases. For example, a [ChatBot](#chatbot) for automotive repair technicians would use RAG to retrieve sections from repair manuals and logs from past service jobs, selecting the ones that are most relevant to a particular problem or subsystem the technician is working on. This [Context](#context) is passed as part of the [Prompt](#prompt) to the [LLM](#large-language-model). 
@@ -357,9 +405,17 @@ See [this IBM blog post](https://research.ibm.com/blog/retrieval-augmented-gener
 
 The generic term for outputs from a [Generative AI Model](#generative-ai-model) or [AI System](#ai-system). Sometimes _results_ is also used.
 
+## Risk
+
+[\[2\]](#nist) The composite measure of an event’s probability of occurring and the magnitude or degree of the consequences of the corresponding event. Risk is a function of the negative impact if the event occurs and the likelihood of occurrence.
+
 ## Robustness
 
 How well does the [AI System](#ai-system) continue to perform within acceptable limits or degrade &ldquo;gracefully&rdquo; when stressed in some way? For example, how well does a [Generative AI Model](#generative-ai-model) respond to prompts that deviate from its training data?
+
+## Scalability
+
+A general concern for large-scale systems; how easily, efficiently, and reliably can you scale up their service capacity in response to load. When the load decreases, can you scale the system back down to conserve resources that aren't needed? 
 
 ## Scenario
 
@@ -367,13 +423,23 @@ One _path_ through a use case, such as one &ldquo;happy path&rdquo; from beginni
 
 **Note:** When the text doesn't link to this definition, it is because the word is being used generically or because the text already linked to this definition. Hopefully the context will be clear. 
 
+## Security
+
+Preventing, detecting, and mitigating undesirable access and use of physical and software systems, including data. Software and data security is frequently called [Cybersecurity](#cybersecurity), while the term security also encompasses [Risks](#risk) like unauthorized access to or destruction of physical spaces, etc. 
+
+[AI Systems](#ai-systems) introduce new cybersecurity concerns, such as [Prompt Injection](#prompt-injection). Evaluations can be written for security concerns, in addition to traditional detection and mitigation tools.
+
 ## Sequential
 
 The steps of some work are performed in a predictable, repeatable order. This property is one of the requirements for [Deterministic](#determinism) [Behavior](#behavior). Contrast with [Concurrent](#concurrent).
 
 ## Side Effect
 
-Reading and/or writing [State](#state) shared outside a [Unit](#unit), i.e., a [Function](#function) with other functions. See also [Determinism](#determinism). If a [Component](#component) contains unit that perform side effects, then the component itself is considered to perform side effects.
+Reading and/or writing [State](#state) shared outside a [Unit](#unit), i.e., a [Function](#function) with other functions. If a [Component](#component) contains unit that perform side effects, then the component itself is considered to perform side effects. See also [Determinism](#determinism).
+
+## Social Responsibility
+
+[\[2\]](#nist) An organization’s responsibility for the impacts of its decisions and activities on society and the environment through transparent and ethical behavior. 
 
 ## Specification-Driven Development
 
@@ -399,9 +465,17 @@ The behavior of a system where observed values are governed by a random probabil
 
 Often abbreviated _SFT_. A more general term than [Instruction Fine Tuning](#instruction-fine-tuning), but often used synonymously. _Supervised_ is an old term in machine learning for any kind of training algorithm that uses [Labeled Data](#labeled-data), i.e., data that includes the expected answers. See also [Tuning](#tuning).
 
+## Sustainability
+
+(See also [\[2\]](#nist)) Taking into account the environmental impact of [AI systems](#ai-system), such as carbon footprint and water usage for cooling, both now and for the future.
+
 ## System Prompt
 
 A commonly-used, statically-coded part of the [Context](#context) information added by an [AI System](#ai-system) the [Prompt](#prompt) before sending it to the [LLM](#large-language-model). System prompts are typically used to provide the model with overall guidance about the application's purpose and how the LLM should respond. For example, it might include phrases like &ldquo;You are a helpful software development assistant.&rdquo;
+
+## Taxonomy
+
+Used in the context of [Evaluations](#evaluation), _taxonomy_ is used to refer to how categories are defined for known risks, other safety concerns, and other areas where detection or measurement of behaviors is desirable.
 
 ## Teacher Model
 
@@ -433,17 +507,17 @@ See also [Design by Contract](#design-by-contract), [Specification-Driven Develo
 
 ## Token
 
-For language [Generative AI Models](#generative-ai-model), the training texts and query prompts are split into tokens, usually whole words or fractions according to a vocabulary of tens of thousands of tokens that can include common single characters, several characters, and &ldquo;control&rdquo; tokens (like &ldquo;end of input&rdquo;). The rule of thumb is a corpus will have roughly 1.5 times the number of tokens as it will have words.
+For [Large Language Models](#large-language-model), the training texts and query prompts are split into tokens, usually whole words or fractions according to a vocabulary of tens of thousands of tokens that can include common single characters, several characters, and &ldquo;control&rdquo; tokens (like &ldquo;end of input&rdquo;). A rule of thumb is a corpus will parse into roughly 1.5 times the number of tokens as it has words.
 
 ## Training
 
-In our context, training is the processes used to teach a model, such as a [Generative AI Models](#generative-ai-model) how to do its intended job. A more precise term used in generative AI model development is _pre-training_, the training process that uses a massive data corpus to teach the model facts about the world, how to speak and understand human language, and do some skills. However, the resulting model uses does poorly on specialized tasks and even basic skills like following a user's instructions, conforming to social norms (e.g., avoiding hate speech), etc. 
+In our context, training is the processes used to teach a model, such as a [Generative AI Models](#generative-ai-model) how to do its intended job. A more precise term used in generative AI model development is [Pre-training](#pre-training), the training process that uses a massive data corpus to teach the model facts about the world, how to speak and understand human language, and do some skills. However, the resulting model uses does poorly on specialized tasks and even basic skills like following a user's instructions, conforming to social norms (e.g., avoiding hate speech), etc. 
 
-That's where a second [Tuning](#tuning) (also sometimes called _post-training_) phase comes in, a suite of processes used to improve the models performance on many general or specific skills.
+That's where a second [Tuning](#tuning) phase comes in, often called [Post-training](#post-training), which uses a suite of processes to improve the models performance on many general or specific skills.
 
 ## Tuning
 
-Tuning, or _post-training_, refers to one or more processes used to transform a [Pre-trained](#training) model into one that exhibits much better desired [Behaviors](#behavior) (like instruction following) or specialized domain knowledge. The term _fine tuning_ (sometimes spelled _finetuning_) is also widely used, e.g., for [Instruction Fine Tuning](#instruction-fine-tuning) and [Supervised Fine Tuning](#supervised-fine-tuning)
+Tuning, or [Post-training](#post-training), refers to one or more processes used to transform a [Pre-trained](#pre-training) model into one that exhibits much better desired [Behaviors](#behavior) (like instruction following) or specialized domain knowledge. The term [Fine Tuning](#fine-tuning) (sometimes spelled _finetuning_) is also widely used, e.g., for [Instruction Fine Tuning](#instruction-fine-tuning) and [Supervised Fine Tuning](#supervised-fine-tuning), one of the tuning techniques. Another suite of techniques used is [Reinforcement Learning](#reinforcement-learning).
 
 ## Unit
 
