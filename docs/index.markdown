@@ -13,9 +13,9 @@ Welcome to the **The AI Alliance Glossary**, a resource shared across our websit
 > **Tips:**
 >
 > 1. Use the search box at the top of this page to find specific content.
-> 2. [Capitalized Terms]({{site.glossaryurl}}/) in our websites link to the glossary definitions here.
+> 2. [Capitalized Terms]({{site.baseurl}}/glossary/) in our websites link to the glossary definitions here.
 
-<a href="{{site.glossaryurl}}" class="header-btn">Go To The Glossary</a>
+<a href="{{site.baseurl}}/glossary/" class="header-btn">Go To The Glossary</a>
 
 ---
 
