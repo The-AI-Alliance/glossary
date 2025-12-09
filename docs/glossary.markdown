@@ -14,6 +14,8 @@ Some definitions are adapted from the following sources, which are indicated bel
 1. <a id="mlc">[_MLCommons AI Safety v0.5 Benchmark Proof of Concept Technical Glossary_]({{site.baseurl}}/references/#mlcommons-glossary){:id="mlc-glossary"}
 2. <a id="nist">[_NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)_]({{site.baseurl}}/references/#nist-risk-management-framework){:id="nist-rmf"}
 
+Also, a few definitions quote the [_Merriam-Webster Dictionary_](https://www.merriam-webster.com/dictionary/){:target="mw-dict"}, where noted.
+
 Sometimes we will use a term that could be defined, but we won't provide a definition for brevity. We show these terms in _italics_. You can assume the usual, plain-sense meaning for the term, such as how it makes sense in the current context of use.
 
 [A](#a){:class="category-btn"} [B](#b){:class="category-btn"} [C](#c){:class="category-btn"} [D](#d){:class="category-btn"} [E](#e){:class="category-btn"} [F](#f){:class="category-btn"} [G](#g){:class="category-btn"} [H](#h){:class="category-btn"} [I](#i){:class="category-btn"} [J](#j){:class="category-btn"} [K](#k){:class="category-btn"} [L](#l){:class="category-btn"} [M](#m){:class="category-btn"} [N](#n){:class="category-btn"} [O](#o){:class="category-btn"} [P](#p){:class="category-btn"} [Q](#q){:class="category-btn"} [R](#r){:class="category-btn"} [S](#s){:class="category-btn"} [T](#t){:class="category-btn"} [U](#u){:class="category-btn"} [V](#v){:class="category-btn"} [W](#w){:class="category-btn"} [X](#x){:class="category-btn"} [Y](#y){:class="category-btn"} [Z](#z){:class="category-btn"}
@@ -52,11 +54,11 @@ An aspect of [Governance](#governance), where we trace behaviors through [AI Sys
 
 ### Adaptation
 
-A general term used by [Nathan Lambert]({{site.baseurl}}/references/#nathan-lambert) for the addition [Tuning](#tuning) performed on a [Trained](#trained) [Generative AI Model](#generative-ai-model) to improve its [Alignment](#alignment) for user goals, like better domain-specific awareness, instruction following, and awareness of social norms, etc.
+A general term used by [Nathan Lambert](https://the-ai-alliance.github.io/ai-application-testing/references/#nathan-lambert){:target="nl"} for the addition [Tuning](#tuning) performed on a [Trained](#trained) [Generative AI Model](#generative-ai-model) to improve its [Alignment](#alignment) for user goals, like better domain-specific awareness, instruction following, and awareness of social norms, etc.
 
 ### Agent
 
-An old concept in AI, but now experiencing a renaissance as the most flexible architecture pattern for AI-based applications. Agents are orchestrations of [Generative AI Model](#generative-ai-model) and external service invocations, e.g., planners, schedulers, reasoning engines, data sources (weather, search, ...), etc. In this architecture, the best capabilities of each service and model are leveraged, rather than assuming that models can do everything successfully themselves. Agent-based applications sometimes use multiple models, one per agent, where each one provides some specific capabilities. For example, one model might be process user prompts into back-end API invocations, including to other models, and interpret the results into user-friendly responses.
+An old concept in AI, but now experiencing a renaissance as the most flexible architecture pattern for AI-based applications. Agents are orchestrations of [Generative AI Model](#generative-ai-model) and external service invocations, e.g., planners, schedulers, reasoning engines, data sources (weather, search, ...), etc. In this architecture, the best capabilities of each service and model are leveraged, rather than assuming that models can do everything successfully themselves. Agent-based applications sometimes use multiple models, one per agent, where each one provides some specific capabilities. For example, one model might be process user [Prompts](#prompt) into back-end API invocations, including to other models, and interpret the results into user-friendly [Responses](#response).
 
 Agents may be designed to perform actions automatically for the user, although the risk associated with this autonomy needs to be carefully designed and tested, depending on the severity of potential unintended consequences. Often, agents are designed to recommend actions the user should take or at least request user confirmation before taking actions. 
 
@@ -70,7 +72,7 @@ Umbrella term for an application or system with AI [Components](#component), inc
 
 ### Alignment
 
-A general term for how well an [AI System's](#ai-system) outputs (e.g., replies to queries) and [Behaviors](#behavior) correspond to end-user and service provider objectives, including the quality and utility of results, as well as safety requirements. Quality implies factual correctness and utility implies the results are fit for purpose, e.g., a Q&A system should answer user questions concisely and directly, a Python code-generation system should output valid, bug-free, and secure Python code. [EleutherAI]({{site.baseurl}}/references/#eleuther-ai){:target="eleuther"} defines alignment [this way](https://www.eleuther.ai/alignment){:target="eleuther"}, &ldquo;Ensuring that an artificial intelligence system behaves in a manner that is consistent with human values and goals.&rdquo; See also the work of the [Alignment Forum](https://www.alignmentforum.org/){:target="alignment-forum"}.
+A general term for how well an [AI System's](#ai-system) outputs (e.g., replies to queries) and [Behaviors](#behavior) correspond to end-user and service provider objectives, including the quality and utility of results, as well as safety requirements. Quality implies factual correctness and utility implies the results are fit for purpose, e.g., a Q&A system should answer user questions concisely and directly, a Python code-generation system should output valid, bug-free, and secure Python code. [EleutherAI](https://www.eleuther.ai/){:target="eleuther"} defines alignment [this way](https://www.eleuther.ai/alignment){:target="eleuther"}, &ldquo;Ensuring that an artificial intelligence system behaves in a manner that is consistent with human values and goals.&rdquo; See also the work of the [Alignment Forum](https://www.alignmentforum.org/){:target="alignment-forum"}.
 
 ### Annotation
 
@@ -205,11 +207,15 @@ Can humans understand why the system behaves the way that it does in a particula
 
 ### Fairness
 
-Does the [AI system's](#ai-system) responses exhibit social biases, preferential treatment, or other forms of non-objectivity?
+Does the [AI system's](#ai-system) [Responses](#response) exhibit social biases, preferential treatment, or other forms of non-objectivity?
 
 ### Feature
 
 For our purposes, a small bit of functionality provided by a [Component](#component) and the [AI Systems](#ai-systems) that use it. A feature is the increment of change in a single cycle of the [Test-Driven Development](#test-driven-development) process, which could be enhancing some user-visible functionality or adding wholly-new new functionality in small increments. See also [Use Case](#use-case).
+
+## Few-shot Prompt
+
+Sometimes, providing a few examples in a prompt of the desired responses conditions the model to produce better responses. This is the idea with _few-shot prompts_. For an example, see [this discussion](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"} in [Testing Generative AI Applications](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"}. See also [Prompt](#prompt), [Zero-shot Prompt](#zero-shot-prompt), and [Prompt Engineering](#prompt-engineering).
 
 ### Fine Tuning
 
@@ -237,7 +243,7 @@ Contrast with [Object-Oriented Programming](#object-oriented-programming). Many 
 
 A frequently-used term for inference-time use of [Evaluations](#evaluation) to detect and mitigate usage of the [AI System](#ai-system) that is considered unsafe or otherwise outside the terms of use.
 
-Guardrails often focus on user [Prompts](#prompt) and system [Responses](#response), looking for undesirable content, such as hate speech, misinformation, hallucinations, hacking attempts, etc.
+Guardrails often focus on user [Prompts](#prompt) and [Responses](#response), looking for undesirable content, such as hate speech, misinformation, hallucinations, hacking attempts, etc.
 
 ### Generative Adversarial Networks
 
@@ -283,7 +289,7 @@ Sending information to a [Generative AI Model](#generative-ai-model) or [AI Syst
 
 ### Instruction Fine Tuning
 
-Often abbreviated _IFT_. A form of [Supervised Fine Tuning](#supervised-fine-tuning) that uses a [Labeled Data](#labeled-data) set of instruction prompts and responses. It is designed to improve model performance for specific tasks and for following instructions, in general, such as [Question Answering](#question-answering). See also [Tuning](#tuning).
+Often abbreviated _IFT_. A form of [Supervised Fine Tuning](#supervised-fine-tuning) that uses a [Labeled Data](#labeled-data) set of instruction [Prompts](#prompt) and [Responses](#response). It is designed to improve model performance for specific tasks and for following instructions, in general, such as [Question Answering](#question-answering). See also [Tuning](#tuning).
 
 ### Integration Benchmark
 
@@ -309,7 +315,7 @@ Labeled data contains content used to train a model and corresponding _labels_ o
 
 In the context of [Generative AI Models](#generative-ai-models), there are several popular formats for labeled data:
 
-* **Question and answer (Q&A) pairs:** A prompt, such as a question or an instruction to do something, is accompanied by an answer to the question or an expected response to the instruction.
+* **Question and answer (Q&A) pairs:** A set of [Prompts](#prompt), such as questions or instructions to do tasks, accompanied by answers or expected [Responses](#response).
 * **Preference data:** Similar to Q&A pairs, but in addition to the _preferred_ or _chosen_ answer, a _rejected_ answer is provided, which supports teaching about responses that are good as well as bad.
 
 ### Large Language Model
@@ -357,7 +363,7 @@ The [Wikipedia page](https://en.wikipedia.org/wiki/OODA_loop){:target="ooda"} ha
 
 ### Paradigm
 
-From the [_Merriam-Webster Dictionary_]({{site.baseurl}}/references/#merriam-webster-dictionary) definition of [_paradigm_](https://www.merriam-webster.com/dictionary/paradigm){:target="dict"}: &ldquo;a philosophical and theoretical framework of a scientific school or discipline within which theories, laws, and generalizations and the experiments performed in support of them are formulated.&rdquo;
+From the [_Merriam-Webster Dictionary_](https://www.merriam-webster.com/dictionary/){:target="mw-dict"}) definition of [_paradigm_](https://www.merriam-webster.com/dictionary/paradigm){:target="dict"}: &ldquo;a philosophical and theoretical framework of a scientific school or discipline within which theories, laws, and generalizations and the experiments performed in support of them are formulated.&rdquo;
 
 ### Predictable
 
@@ -385,11 +391,11 @@ Contrast with [Determinism](#determinism). See also [Stochastic](#stochastic).
 
 ### Prompt
 
-The query a user (or another system) sends to an [LLM](#large-language-model). Often, additional [Context](#context) information is added by an [AI System](#ai-system) before sending the prompt to the LLM. See also [Prompt Engineering](#prompt-engineering).
+The query a user (or another system) sends to an [LLM](#large-language-model). Often, additional [Context](#context) information is added by an [AI System](#ai-system) before sending the prompt to the LLM. See also [Prompt Engineering](#prompt-engineering), [Prompt Injection](#prompt-Injection), [Few-shot Prompt](#few-shot-prompt), and [Zero-shot Prompt](#zero-shot-prompt).
 
 ### Prompt Engineering
 
-A term for the careful construction of good [Prompts](#prompt) to maximize the quality of [Inference](#inference) responses. It is really considered more _art_ than _science_ or _engineering_ because of the subjective relationship between prompts and responses for [Generative AI Models](#generative-ai-model). See also [Prompt Injection](#prompt-injection).
+A term for the careful construction of good [Prompts](#prompt) to maximize the quality of [Inference](#inference) [Responses](#response). It is really considered more _art_ than _science_ or _engineering_ because of the subjective relationship between prompts and responses for [Generative AI Models](#generative-ai-model). See also [Prompt Injection](#prompt-injection).
 
 ### Prompt Injection
 
@@ -431,7 +437,7 @@ See the discussion of [Reinforcement Fine Tuning]({{site.baseurl}}/future-ideas/
 
 Reinforcement learning (RL) is a form of machine learning, often used for optimizing control or similar systems. In RL, an agent performs a loop where it observes the state of the &ldquo;world&rdquo; visible to it at the current time, it takes what it thinks is a suitable action for the next step, chosen to maximize a reward signal, often with the goal of maximizing the long-term reward, such as wining a game. The _reinforcement_ aspect is an update at each step that is done to a _policy_ of some kind that used by the agent to decide which actions in subsequent steps are most likely to produce maximize long-term, cummulative reward, given the current known state. However, when choosing the next step, the _best_ choice is not always made. Some degree of randomness is introduced so that the agent explores all possible states and rewards, rather than getting stuck always choosing the same actions that are known good, but may be less optimal than actions that have not yet been tried. 
 
-Variations include having a dedicated _reward model_ that calculates the reward based on the chosen action. When RL is used for a game, for example, it might be obvious what the reward is for any action and state combination, i.e., did you land on square that reveals a &ldquo;boost&rdquo; of some kind. In contrast, reward determination like deciding if an LLM output is a good response to a prompt, etc. is not so simple. 
+Variations include having a dedicated _reward model_ that calculates the reward based on the chosen action. When RL is used for a game, for example, it might be obvious what the reward is for any action and state combination, i.e., did you land on square that reveals a &ldquo;boost&rdquo; of some kind. In contrast, reward determination like deciding if an LLM output is a good [Response](#response) to a [Prompt](#prompt), etc. is not so simple. 
 
 In the generative AI context, RL is a popular tool in the suite of model [Tuning](#tuning) processes that are used to improve model performance in various ways. In particular, [Reinforcement Learning with Human Feedback](#reinforcement-learning-with-human-feedback) (RLHF) is a popular technique for [Adaptation](#adaptation).
 
@@ -443,7 +449,7 @@ A [Reinforcement Learning](#reinforcement-learning) introduced by OpenAI that us
 
 ### Reinforcement Learning with Verifiable Rewards
 
-A [Reinforcement Learning](#reinforcement-learning) approach for LLMs where the response from a model during an RL step can be verified externally. For example, does the generated code compile and pass existing unit tests? See [Awesome RLVR](https://github.com/opendilab/awesome-RLVR){:target="_blank"} for more details.
+A [Reinforcement Learning](#reinforcement-learning) approach for LLMs where the [Response](#response) from a model during an RL step can be verified externally. For example, does the generated code compile and pass existing unit tests? See [Awesome RLVR](https://github.com/opendilab/awesome-RLVR){:target="_blank"} for more details.
 
 ### Repeatable
 
@@ -471,7 +477,7 @@ The generic term for outputs from a [Generative AI Model](#generative-ai-model) 
 
 ### Robustness
 
-How well does the [AI System](#ai-system) continue to perform within acceptable limits or degrade &ldquo;gracefully&rdquo; when stressed in some way? For example, how well does a [Generative AI Model](#generative-ai-model) respond to prompts that deviate from its training data?
+How well does the [AI System](#ai-system) continue to perform within acceptable limits or degrade &ldquo;gracefully&rdquo; when stressed in some way? For example, how well does a [Generative AI Model](#generative-ai-model) [Respond](#response) to [Prompts](#prompt) that deviate from its training data?
 
 ## S
 
@@ -505,9 +511,9 @@ Reading and/or writing [State](#state) shared outside a [Unit](#unit), i.e., a [
 
 ### Specification-Driven Development
 
-Abbreviated _SDD_ and also known as _Spec-Driven Development_. In our context, this refers to [an idea introduced by GitHub and Microsoft]({{site.baseurl}}/references/#specification-driven-development), that we should structure code generation prompts in a more-precise format to ensure we get the code we need. The argument is that many models are already perfectly capable of generating this code, but they are &ldquo;literal minded&rdquo; and need to be told precisely what is needed from them.
+Abbreviated _SDD_ and also known as _Spec-Driven Development_. In our context, this refers to [an idea introduced by GitHub and Microsoft](https://the-ai-alliance.github.io/ai-application-testing/references/#specification-driven-development){:target="sdd"}, that we should structure code generation [Prompts](#prompt) in a more-precise format to ensure we get the code [Responses](#response) we need. The argument is that many models are already perfectly capable of generating this code, but they are &ldquo;literal minded&rdquo; and need to be told precisely what is needed from them.
 
-We discuss SDD at length in the [Specification-Driven Development]({{site.baseurl}}/specification-driven-development) chapter. SDD is similar in its goals to [Test-Driven Development](#test-driven-development), although arguably closer to the emphasis in [Behavior-Driven Development](#behavior-driven-development).
+We discuss SDD at length in the [Specification-Driven Development](https://the-ai-alliance.github.io/ai-application-testing/references/#specification-driven-development){:target="sdd"} chapter of [Testing Generative AI Applications](https://the-ai-alliance.github.io/ai-application-testing/){:target="tgaa"}. SDD is similar in its goals to [Test-Driven Development](#test-driven-development), although arguably closer to the emphasis in [Behavior-Driven Development](#behavior-driven-development).
 
 ### State
 
@@ -571,7 +577,7 @@ See also [Design by Contract](#design-by-contract), [Specification-Driven Develo
 
 ### Token
 
-For [Large Language Models](#large-language-model), the training texts and query prompts are split into tokens, usually whole words or fractions according to a vocabulary of tens of thousands of tokens that can include common single characters, several characters, and &ldquo;control&rdquo; tokens (like &ldquo;end of input&rdquo;). A rule of thumb is a corpus will parse into roughly 1.5 times the number of tokens as it has words.
+For [Large Language Models](#large-language-model), the training texts and query [Prompts](#prompt) are split into tokens, usually whole words or fractions according to a vocabulary of tens of thousands of tokens that can include common single characters, several characters, and &ldquo;control&rdquo; tokens (like &ldquo;end of input&rdquo;). A rule of thumb is a corpus will parse into roughly 1.5 times the number of tokens as it has words.
 
 ### Training
 
@@ -619,7 +625,7 @@ Data without labels indicating expected &ldquo;information&rdquo; about the data
 
 ### Vibe Coding
 
-A term [coined by Andrej Karpathy](https://x.com/karpathy/status/1886192184808149383){:target="ak"} for just going with the code generated by an LLM, tweaking the prompt as needed to get the LLM to fix bugs and incorrect behavior. Hence, it's a completely &ldquo;non-engineered&rdquo; approach to coding, which can work well for quick coding needs, especially for non-programmers, but generally is not sufficient for longer-term projects. Hence, the term has a slightly negative connotation for many people, as in &ldquo;this is not a serious way to write software&rdquo;. Contrast with [Vibe Engineering](#vibe-engineering).
+A term [coined by Andrej Karpathy](https://x.com/karpathy/status/1886192184808149383){:target="ak"} for just going with the code generated by an LLM, tweaking the [Prompt](#prompt) as needed to get the LLM to fix bugs and incorrect behavior. Hence, it's a completely &ldquo;non-engineered&rdquo; approach to coding, which can work well for quick coding needs, especially for non-programmers, but generally is not sufficient for longer-term projects. Hence, the term has a slightly negative connotation for many people, as in &ldquo;this is not a serious way to write software&rdquo;. Contrast with [Vibe Engineering](#vibe-engineering).
 
 ### Vibe Engineering
 
@@ -629,4 +635,8 @@ A term [coined by Andrej Karpathy](https://x.com/karpathy/status/188619218480814
 ## X
 ## Y
 ## Z
+
+## Zero-shot Prompt
+
+In a [Few-shot Prompt](#few-shot-prompt), a few examples are included in the [Prompt](#prompt) of possible user prompts and the desired [Responses](#responses). This can condition the model to produce better responses. A _zero-shot prompt_ doesn't include such examples, relying on the rest of the prompt, including any other [Context](#context), combined with the model's inherent abilities to generate acceptable responses. For an example, see [this discussion](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"} in [Testing Generative AI Applications](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"}. See also [Prompt](#prompt), [Few-shot Prompt](#few-shot-prompt), and [Prompt Engineering](#prompt-engineering).
 
