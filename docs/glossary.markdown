@@ -213,7 +213,7 @@ Does the [AI system's](#ai-system) [Responses](#response) exhibit social biases,
 
 For our purposes, a small bit of functionality provided by a [Component](#component) and the [AI Systems](#ai-systems) that use it. A feature is the increment of change in a single cycle of the [Test-Driven Development](#test-driven-development) process, which could be enhancing some user-visible functionality or adding wholly-new new functionality in small increments. See also [Use Case](#use-case).
 
-## Few-shot Prompt
+### Few-shot Prompt
 
 Sometimes, providing a few examples in a prompt of the desired responses conditions the model to produce better responses. This is the idea with _few-shot prompts_. For an example, see [this discussion](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"} in [Testing Generative AI Applications](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"}. See also [Prompt](#prompt), [Zero-shot Prompt](#zero-shot-prompt), and [Prompt Engineering](#prompt-engineering).
 
@@ -278,6 +278,10 @@ End-to-end control of assets, especially [Data Sets](#Data Set) and [Models](#mo
 When a [Generative AI Model](#generative-ai-model) generates text that seems plausible, but is not factually accurate. Lying is not the right term, because there is no malice intended by the model, which only knows how to generate a sequence of [Tokens](#token) that are plausible. Which token is actually returned in a given context is a [Stochastic](#stochastic) process, i.e., a random process governed by a [Probability](#probability-and-statistics) distributions.
 
 ## I
+
+### In-Context Learning 
+
+The idea of embedding in a [Prompt](#prompt) additional information to help the [LLM](#large-language-model) produce better results. Examples include [Retrieval-augmented Generation](#retrieval-augmented-generation), which is a design pattern where information relevant to a query is retrieved from a data store and passed as part of the [Context](#context) for the prompt, and [Few-shot Prompting](#few-shot-prompt), where a few examples of user prompts and good responses are provided in the prompt.
 
 ### Immutable
 
@@ -636,7 +640,7 @@ A term [coined by Andrej Karpathy](https://x.com/karpathy/status/188619218480814
 ## Y
 ## Z
 
-## Zero-shot Prompt
+### Zero-shot Prompt
 
 In a [Few-shot Prompt](#few-shot-prompt), a few examples are included in the [Prompt](#prompt) of possible user prompts and the desired [Responses](#responses). This can condition the model to produce better responses. A _zero-shot prompt_ doesn't include such examples, relying on the rest of the prompt, including any other [Context](#context), combined with the model's inherent abilities to generate acceptable responses. For an example, see [this discussion](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"} in [Testing Generative AI Applications](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"}. See also [Prompt](#prompt), [Few-shot Prompt](#few-shot-prompt), and [Prompt Engineering](#prompt-engineering).
 
