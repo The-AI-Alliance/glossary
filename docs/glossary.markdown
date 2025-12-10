@@ -421,6 +421,10 @@ See also [Design by Contract](#design-by-contract), [Specification-Driven Develo
 
 In many, if not most applications, models and the applications that use them should be good at providing focused, useful answers to user questions, rather than generating text that might be related to the topic, but not useful to the user. [Instruction Fine Tuning](#instruction-fine-tuning) focuses on improving this capability.
 
+### Quantization
+
+In the context of AI, a technique for reducing the size of a model, and hence the resources required to use it, by replacing some or all of the floating point weights (either 16 bit `fp16` or sometimes 32 bit `fp32`) with smaller precision floating point or integer values. Often, the size and resource savings outweigh a relatively small degradation in performance.
+
 ## R
 
 ### Refactoring
