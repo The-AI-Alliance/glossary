@@ -16,7 +16,7 @@ Some definitions are adapted from the following sources, which are indicated bel
 
 Also, a few definitions quote the [_Merriam-Webster Dictionary_](https://www.merriam-webster.com/dictionary/){:target="mw-dict"}, where noted.
 
-Sometimes we will use a term that could be defined, but we won't provide a definition for brevity. We show these terms in _italics_. You can assume the usual, plain-sense meaning for the term, such as how it makes sense in the current context of use.
+Sometimes we will use a term that could be defined, but we won't provide a definition for brevity. We show these terms in _italics_. You can assume the usual, plain-sense meaning for the term, such as how it makes sense in the current context of use. For hyphenated terms, we use _Foo-Bar-Baz_ rather than _Foo-bar-baz_, which is more consistent with industry usage.
 
 [A](#a){:class="category-btn"} [B](#b){:class="category-btn"} [C](#c){:class="category-btn"} [D](#d){:class="category-btn"} [E](#e){:class="category-btn"} [F](#f){:class="category-btn"} [G](#g){:class="category-btn"} [H](#h){:class="category-btn"} [I](#i){:class="category-btn"} [J](#j){:class="category-btn"} [K](#k){:class="category-btn"} [L](#l){:class="category-btn"} [M](#m){:class="category-btn"} [N](#n){:class="category-btn"} [O](#o){:class="category-btn"} [P](#p){:class="category-btn"} [Q](#q){:class="category-btn"} [R](#r){:class="category-btn"} [S](#s){:class="category-btn"} [T](#t){:class="category-btn"} [U](#u){:class="category-btn"} [V](#v){:class="category-btn"} [W](#w){:class="category-btn"} [X](#x){:class="category-btn"} [Y](#y){:class="category-btn"} [Z](#z){:class="category-btn"}
 
@@ -122,7 +122,7 @@ A model or other tool that analyzes data and outputs one or more [Classification
 
 ### Coding Agent
 
-An AI-powered IDE or tool specifically designed for AI-assisted software development. Here is a partial list of _coding agents_:
+An AI-powered IDE or tool specifically designed for AI-assisted software development. Here is a partial list of _coding agents_ (at the time of this writing):
 
 * [AWS Kiro](https://kiro.dev/){:target="_blank"} (an AI IDE designed to support [Specification-Driven Development](#specification-driven-development))
 * [Gemini CLI](https://github.com/google-gemini/gemini-cli){:target="_blank"}
@@ -213,13 +213,13 @@ Does the [AI system's](#ai-system) [Responses](#response) exhibit social biases,
 
 For our purposes, a small bit of functionality provided by a [Component](#component) and the [AI Systems](#ai-systems) that use it. A feature is the increment of change in a single cycle of the [Test-Driven Development](#test-driven-development) process, which could be enhancing some user-visible functionality or adding wholly-new new functionality in small increments. See also [Use Case](#use-case).
 
-### Few-shot Prompt
+### Few-Shot Prompt
 
-Sometimes, providing a few examples in a prompt of the desired responses conditions the model to produce better responses. This is the idea with _few-shot prompts_. For an example, see [this discussion](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"} in [Testing Generative AI Applications](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"}. See also [Prompt](#prompt), [Zero-shot Prompt](#zero-shot-prompt), and [Prompt Engineering](#prompt-engineering).
+Sometimes, providing a few examples in a prompt of the desired responses conditions the model to produce better responses. This is the idea with _few-shot prompts_. For an example, see [this discussion](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"} in [Testing Generative AI Applications](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"}. See also [Prompt](#prompt), [Zero-Shot Prompt](#zero-shot-prompt), and [Prompt Engineering](#prompt-engineering).
 
 ### Fine Tuning
 
-A more specific term for [Tuning](#tuning), a part of [Post-training](#post-training), that emphasizes that after the major learning has happened during [Pre-training](#pre-training), the model behavior is refined and improved with additional training techniques. See also [Supervised Fine Tuning](#supervised-fine-tuning).
+A more specific term for [Tuning](#tuning), a part of [Post-Training](#post-training), that emphasizes that after the major learning has happened during [Pre-Training](#pre-training), the model behavior is refined and improved with additional training techniques. See also [Supervised Fine Tuning](#supervised-fine-tuning).
 
 ### Function
 
@@ -281,7 +281,7 @@ When a [Generative AI Model](#generative-ai-model) generates text that seems pla
 
 ### In-Context Learning 
 
-The idea of embedding in a [Prompt](#prompt) additional information to help the [LLM](#large-language-model) produce better results. Examples include [Retrieval-augmented Generation](#retrieval-augmented-generation), which is a design pattern where information relevant to a query is retrieved from a data store and passed as part of the [Context](#context) for the prompt, and [Few-shot Prompting](#few-shot-prompt), where a few examples of user prompts and good responses are provided in the prompt.
+The idea of embedding in a [Prompt](#prompt) additional information to help the [LLM](#large-language-model) produce better results. Examples include [Retrieval-Augmented Generation](#retrieval-augmented-generation), which is a design pattern where information relevant to a query is retrieved from a data store and passed as part of the [Context](#context) for the prompt, and [Few-Shot Prompting](#few-shot-prompt), where a few examples of user prompts and good responses are provided in the prompt.
 
 ### Immutable
 
@@ -334,7 +334,7 @@ A combination of data and code, usually trained on a [Data Set](#Data Set), to s
 
 ### Model Context Protocol
 
-Abbreviated MCP, a de-facto standard for communications between models, agents, and other tools. See [_modelcontextprotocol.io_](https://modelcontextprotocol.io/introduction){:target="_blank"} for more information.
+Abbreviated MCP, a de-facto standard for communications between models, agents, and other tools. See [modelcontextprotocol.io](https://modelcontextprotocol.io/introduction){:target="_blank"} for more information.
 
 ### Multimodal Model
 
@@ -350,7 +350,7 @@ A [Unit's](#unit) [State](#state) can be modified during execution, either throu
 
 ### Object-Oriented Programming
 
-OOP (or OOSD - object-oriented software development) is a design methodology that creates software [Components](#component) with boundaries that mimic real-world objects (like _Person_, _Automobile_, _Shopping Cart_, etc.). Each object encapsulates [State](#state) and [Behavior](#behavior) behind its abstraction.
+OOP (or sometimes _object-oriented software development_ - OOSD - or _object-oriented development_ - OOD) is a design methodology that creates software [Components](#component) with boundaries that mimic real-world objects (like _Person_, _Automobile_, _Shopping Cart_, etc.). Each object encapsulates [State](#state) and [Behavior](#behavior) behind its abstraction.
 
 Introduced in the Simula language in the 1960s, it gained widespread interest in the 1980s with the emergence of graphical user interfaces (GUIs), where objects like _Window_, _Buttons_, and _Menus_ were an intuitive way to organize such software.
 
@@ -373,17 +373,17 @@ From the [_Merriam-Webster Dictionary_](https://www.merriam-webster.com/dictiona
 
 In the context of software, the quality that knowing a [Unit's](#unit) or [Components](#component) history of past [Behavior](#behavior) and its design, you can predict its future behavior reliably. See also [State Machine](#state-machine).
 
-### Pre-training
+### Pre-Training
 
-See [Training](#training). A more precise term in the context of [Generative AI Model](#generative-ai-model) training, where pre-training uses massive datasets to teach models from scratch, followed by a [Post-training](#post-training) ([Tuning](#tuning)) process to refine the behaviors as needed.
+See [Training](#training). A more precise term in the context of [Generative AI Model](#generative-ai-model) training, where pre-training uses massive datasets to teach models from scratch, followed by a [Post-Training](#post-training) ([Tuning](#tuning)) process to refine the behaviors as needed.
 
 ### Privacy
 
 Protection of individuals’ sensitive data and preservation of their rights.
 
-### Post-training
+### Post-Training
 
-See [Tuning](#tuning). A more precise term in the context of [Generative AI Model](#generative-ai-model) training, where [Pre-training](#pre-training) uses massive datasets to teach models from scratch, followed by a ost training (tuning) process to refine the behaviors as needed.
+See [Tuning](#tuning). A more precise term in the context of [Generative AI Model](#generative-ai-model) training, where [Pre-Training](#pre-training) uses massive datasets to teach models from scratch, followed by a ost training (tuning) process to refine the behaviors as needed.
 
 ### Probability and Statistics
 
@@ -395,7 +395,7 @@ Contrast with [Determinism](#determinism). See also [Stochastic](#stochastic).
 
 ### Prompt
 
-The query a user (or another system) sends to an [LLM](#large-language-model). Often, additional [Context](#context) information is added by an [AI System](#ai-system) before sending the prompt to the LLM. See also [Prompt Engineering](#prompt-engineering), [Prompt Injection](#prompt-Injection), [Few-shot Prompt](#few-shot-prompt), and [Zero-shot Prompt](#zero-shot-prompt).
+The query a user (or another system) sends to an [LLM](#large-language-model). Often, additional [Context](#context) information is added by an [AI System](#ai-system) before sending the prompt to the LLM. See also [Prompt Engineering](#prompt-engineering), [Prompt Injection](#prompt-injection), [Few-Shot Prompt](#few-shot-prompt), and [Zero-Shot Prompt](#zero-shot-prompt).
 
 ### Prompt Engineering
 
@@ -467,7 +467,7 @@ If an action, like running a test, is run repeatedly with no code or data change
 
 (See also [\[2\]](#nist)) An umbrella term about comprehensive approaches to safety, accountability, and equitability. It covers an organization’s professional responsibility to address concerns. It can encompass tools, models, people, processes, integrated systems, and data.
 
-### Retrieval-augmented Generation
+### Retrieval-Augmented Generation
 
 RAG was one of the first AI-specific design patterns for applications. It uses one or more data stores with information relevant to an application's use cases. For example, a [ChatBot](#chatbot) for automotive repair technicians would use RAG to retrieve sections from repair manuals and logs from past service jobs, selecting the ones that are most relevant to a particular problem or subsystem the technician is working on. This [Context](#context) is passed as part of the [Prompt](#prompt) to the [LLM](#large-language-model). 
 
@@ -589,9 +589,9 @@ For [Large Language Models](#large-language-model), the training texts and query
 
 ### Training
 
-In our context, training is the processes used to teach a model, such as a [Generative AI Models](#generative-ai-model) how to do its intended job. A more precise term used in generative AI model development is [Pre-training](#pre-training), the training process that uses a massive data corpus to teach the model facts about the world, how to speak and understand human language, and do some skills. However, the resulting model uses does poorly on specialized tasks and even basic skills like following a user's instructions, conforming to social norms (e.g., avoiding hate speech), etc. 
+In our context, training is the processes used to teach a model, such as a [Generative AI Models](#generative-ai-model) how to do its intended job. A more precise term used in generative AI model development is [Pre-Training](#pre-training), the training process that uses a massive data corpus to teach the model facts about the world, how to speak and understand human language, and do some skills. However, the resulting model uses does poorly on specialized tasks and even basic skills like following a user's instructions, conforming to social norms (e.g., avoiding hate speech), etc. 
 
-That's where a second [Tuning](#tuning) phase comes in, often called [Post-training](#post-training), which uses a suite of processes to improve the models performance on many general or specific skills.
+That's where a second [Tuning](#tuning) phase comes in, often called [Post-Training](#post-training), which uses a suite of processes to improve the models performance on many general or specific skills.
 
 ### Trust and Safety
 
@@ -599,7 +599,7 @@ An umbrella term for concerns, processes, and tools to ensure trustworthiness an
 
 ### Tuning
 
-Tuning, or [Post-training](#post-training), refers to one or more processes used to transform a [Pre-trained](#pre-training) model into one that exhibits much better desired [Behaviors](#behavior) (like instruction following) or specialized domain knowledge. The term [Fine Tuning](#fine-tuning) (sometimes spelled _finetuning_) is also widely used, e.g., for [Instruction Fine Tuning](#instruction-fine-tuning) and [Supervised Fine Tuning](#supervised-fine-tuning), one of the tuning techniques. Another suite of techniques used is [Reinforcement Learning](#reinforcement-learning).
+Tuning, or [Post-Training](#post-training), refers to one or more processes used to transform a [Pre-Trained](#pre-training) model into one that exhibits much better desired [Behaviors](#behavior) (like instruction following) or specialized domain knowledge. The term [Fine Tuning](#fine-tuning) (sometimes spelled _finetuning_) is also widely used, e.g., for [Instruction Fine Tuning](#instruction-fine-tuning) and [Supervised Fine Tuning](#supervised-fine-tuning), one of the tuning techniques. Another suite of techniques used is [Reinforcement Learning](#reinforcement-learning).
 
 ## U
 
@@ -644,7 +644,7 @@ A term [coined by Andrej Karpathy](https://x.com/karpathy/status/188619218480814
 ## Y
 ## Z
 
-### Zero-shot Prompt
+### Zero-Shot Prompt
 
-In a [Few-shot Prompt](#few-shot-prompt), a few examples are included in the [Prompt](#prompt) of possible user prompts and the desired [Responses](#responses). This can condition the model to produce better responses. A _zero-shot prompt_ doesn't include such examples, relying on the rest of the prompt, including any other [Context](#context), combined with the model's inherent abilities to generate acceptable responses. For an example, see [this discussion](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"} in [Testing Generative AI Applications](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"}. See also [Prompt](#prompt), [Few-shot Prompt](#few-shot-prompt), and [Prompt Engineering](#prompt-engineering).
+In a [Few-Shot Prompt](#few-shot-prompt), a few examples are included in the [Prompt](#prompt) of possible user prompts and the desired [Responses](#responses). This can condition the model to produce better responses. A _zero-shot prompt_ doesn't include such examples, relying on the rest of the prompt, including any other [Context](#context), combined with the model's inherent abilities to generate acceptable responses. For an example, see [this discussion](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"} in [Testing Generative AI Applications](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"}. See also [Prompt](#prompt), [Few-Shot Prompt](#few-shot-prompt), and [Prompt Engineering](#prompt-engineering).
 
