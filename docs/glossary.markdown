@@ -177,6 +177,12 @@ The output of a [Component](#component) for a given input is always known precis
 
 In contrast, _nondeterminism_ means identical inputs yield different results, removing [Repeatability](#Repeatable) and complicating [Predictability](#predictable), and the ability to write automated, reliable tests.
 
+### Direct Preference Optimization
+
+TODO.
+
+See also [Reinforcement Learning](#reinforcement-learning).
+
 ## E
 
 ### Explainability
@@ -293,7 +299,7 @@ Sending information to a [Generative AI Model](#generative-ai-model) or [AI Syst
 
 ### Instruction Fine Tuning
 
-Often abbreviated _IFT_. A form of [Supervised Fine Tuning](#supervised-fine-tuning) that uses a [Labeled Data](#labeled-data) set of instruction [Prompts](#prompt) and [Responses](#response). It is designed to improve model performance for specific tasks and for following instructions, in general, such as [Question Answering](#question-answering). See also [Tuning](#tuning).
+Often abbreviated _IFT_ and sometimes shortened to _Instruction Tuning_. A form of [Supervised Fine Tuning](#supervised-fine-tuning) that uses a [Labeled Data](#labeled-data) set of instruction [Prompts](#prompt) and [Responses](#response). It is designed to improve model performance for specific tasks and for following instructions, in general, such as [Question Answering](#question-answering). See also [Tuning](#tuning).
 
 ### Integration Benchmark
 
@@ -439,7 +445,7 @@ Automated [Tests](#test) are designed to catch regressions as soon as they occur
 
 ### Reinforcement Fine Tuning
 
-See the discussion of [Reinforcement Fine Tuning]({{site.baseurl}}/future-ideas/from-testing-to-tuning/#reinforcement-fine-tuning) in [From Testing to Tuning]({{site.baseurl}}/future-ideas/from-testing-to-tuning/). 
+See the discussion of [Reinforcement Fine Tuning]({{site.baseurl}}/advanced-techniques/from-testing-to-tuning/#reinforcement-fine-tuning) in [From Testing to Tuning]({{site.baseurl}}/advanced-techniques/from-testing-to-tuning/). 
 
 ### Reinforcement Learning
 
@@ -447,9 +453,9 @@ Reinforcement learning (RL) is a form of machine learning, often used for optimi
 
 Variations include having a dedicated _reward model_ that calculates the reward based on the chosen action. When RL is used for a game, for example, it might be obvious what the reward is for any action and state combination, i.e., did you land on square that reveals a &ldquo;boost&rdquo; of some kind. In contrast, reward determination like deciding if an LLM output is a good [Response](#response) to a [Prompt](#prompt), etc. is not so simple. 
 
-In the generative AI context, RL is a popular tool in the suite of model [Tuning](#tuning) processes that are used to improve model performance in various ways. In particular, [Reinforcement Learning with Human Feedback](#reinforcement-learning-with-human-feedback) (RLHF) is a popular technique for [Adaptation](#adaptation).
+In the generative AI context, RL is a popular tool in the suite of model [Tuning](#tuning) processes that are used to improve model performance in various ways. In particular, [Reinforcement Learning with Human Feedback](#reinforcement-learning-with-human-feedback) (RLHF) is a popular technique for [Adaptation](#adaptation). A new technique called [Direct Preference Optimization](#direct-preference-optimization) (DPO) has largely replaced RL in many applications.
 
-See also the discussion of [Reinforcement Fine Tuning]({{site.baseurl}}/future-ideas/from-testing-to-tuning/#reinforcement-fine-tuning) in [From Testing to Tuning]({{site.baseurl}}/future-ideas/from-testing-to-tuning/), which describes RL in more detail. 
+See also the discussion of [Reinforcement Fine Tuning]({{site.baseurl}}/advanced-techniques/from-testing-to-tuning/#reinforcement-fine-tuning) in [From Testing to Tuning]({{site.baseurl}}/advanced-techniques/from-testing-to-tuning/), which describes RL in more detail. 
 
 ### Reinforcement Learning with Human Feedback
 
@@ -599,7 +605,7 @@ An umbrella term for concerns, processes, and tools to ensure trustworthiness an
 
 ### Tuning
 
-Tuning, or [Post-Training](#post-training), refers to one or more processes used to transform a [Pre-Trained](#pre-training) model into one that exhibits much better desired [Behaviors](#behavior) (like instruction following) or specialized domain knowledge. The term [Fine Tuning](#fine-tuning) (sometimes spelled _finetuning_) is also widely used, e.g., for [Instruction Fine Tuning](#instruction-fine-tuning) and [Supervised Fine Tuning](#supervised-fine-tuning), one of the tuning techniques. Another suite of techniques used is [Reinforcement Learning](#reinforcement-learning).
+Tuning, or [Post-Training](#post-training), refers to one or more processes used to transform a [Pre-Trained](#pre-training) model into one that exhibits much better desired [Behaviors](#behavior) (like instruction following) or specialized domain knowledge. The term [Fine Tuning](#fine-tuning) (sometimes spelled _finetuning_) is also widely used. These days, [Instruction Fine Tuning](#instruction-fine-tuning) is a very common form of tuning, which uses [Supervised Fine Tuning](#supervised-fine-tuning). Another suite of techniques used is [Reinforcement Learning](#reinforcement-learning).
 
 ## U
 
