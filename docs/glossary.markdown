@@ -340,7 +340,7 @@ A combination of data and code, usually trained on a [Data Set](#Data Set), to s
 
 ### Model Context Protocol
 
-Abbreviated MCP, a de-facto standard for communications between models, agents, and other tools. See [modelcontextprotocol.io](https://modelcontextprotocol.io/introduction){:target="_blank"} for more information.
+Abbreviated MCP, a de-facto standard protocol for communications between models, agents, tools, and services, including auto-discovery. See the AI Alliance's [MCP (and Beyond) in the Enterprise: A User Guide ](https://the-ai-alliance.github.io/enterprise-MCP/){:target="mcp"} and [modelcontextprotocol.io](https://modelcontextprotocol.io/introduction){:target="_blank"} for more information.
 
 ### Multimodal Model
 
