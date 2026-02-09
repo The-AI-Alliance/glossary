@@ -64,10 +64,12 @@ Agents may be designed to perform actions automatically for the user, although t
 
 ### Agentic Engineering
 
-A term coined by [Andrej Karpathy](https://x.com/karpathy/status/2019137879310836075) to represent a more careful engineering approach to AI-driven software development than [Vibe Coding](#vibe-coding), the term he coined for more &ldquo;one-off&rdquo; use of AI for generation of proofs of concepts, etc., but not suitable for developming applications that need long-term evolution and maintenance. His reason for this choice of words are as follows (quoting from the tweet):
+A term coined by [Andrej Karpathy](https://x.com/karpathy/status/2019137879310836075) to represent a more careful engineering approach to AI-driven software development than [Vibe Coding](#vibe-coding), the term he coined for more &ldquo;one-off&rdquo; use of AI for generation of proofs of concepts, etc., but not suitable for developing applications that need long-term evolution and maintenance. 
 
-* "agentic" because the new default is that you are not writing the code directly 99% of the time, you are orchestrating agents who do and acting as oversight.
-* "engineering" to emphasize that there is an art & science and expertise to it. It's something you can learn and become better at, with its own depth of a different kind.
+His reasoning for this choice of words is as follows (quoting from the tweet, with &ldquo;light&rdquo; editing):
+
+* **Agentic** because the new default is that you are not writing the code directly 99% of the time, you are orchestrating agents who do and acting as oversight.
+* **Engineering** to emphasize that there is an art & science and expertise to it. It's something you can learn and become better at, with its own depth of a different kind.
 
 See also [Vibe Engineering](#vibe-engineering).
 
