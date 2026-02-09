@@ -20,9 +20,3 @@ If you have any questions or concerns about this effort, please contact us at [c
 ## About This Website
 
 This website is built with [GitHub Pages](https://pages.github.com/){:target="github-pages"}, which uses [Jekyll](https://github.com/jekyll/jekyll){:target="gh-jekyll"} to serve the website. We use the [Just the Docs](https://just-the-docs.github.io/just-the-docs/){:target="just-the-docs"} Jekyll theme.
-
-### Version History
-
-| Version  | Date       |
-| :------- | :--------- |
-| V0.1.0   | 2025-11-24 |
