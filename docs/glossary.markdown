@@ -174,7 +174,7 @@ How closely connected is one [Component](#component) to others in the system? &l
 
 ### Data Set
 
-(See also [\[1\]](#mlc)) A collection of data items used for training, evaluation, etc. Usually, a given data set has a schema (which may simply be &ldquo;unstructured text&rdquo;) and some metadata about provenance, licenses for use, transformations and filters applied, etc.
+(See also [\[1\]](#mlc)) Sometimes written _dataset_, a collection of data items used for training, evaluation, etc. Usually, a given data set has a schema (which may simply be &ldquo;unstructured text&rdquo;) and some metadata that may include information about provenance, license for use (which may specify disallowed uses), target uses, transformations and filters applied, etc.
 
 ### Design by Contract
 
