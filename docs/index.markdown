@@ -662,6 +662,22 @@ terms:
       In a [Few-Shot Prompt](#few-shot-prompt), a few examples are included in the [Prompt](#prompt) of possible user prompts and the desired [Responses](#responses). This can condition the model to produce better responses. A _zero-shot prompt_ doesn't include such examples, relying on the rest of the prompt, including any other [Context](#context), combined with the model's inherent abilities to generate acceptable responses. For an example, see [this discussion](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"} in [Testing Generative AI Applications](https://the-ai-alliance.github.io/ai-application-testing/arch-design/tdd/#ways-that-llms-make-our-jobs-easier){:target="_blank"}. See also [Prompt](#prompt), [Few-Shot Prompt](#few-shot-prompt), and [Prompt Engineering](#prompt-engineering).
 ---
 
+{% comment %}
+For maintainers, if you edit the terms defined above or add new ones, here are a few tips to work around problems parsing the definitions as YAML (also in the README). You may see obscure messages at the Jekyll console like this:
+
+```
+YAML Exception reading /Users/deanwampler/ibm/ai-alliance/repos/others/glossary-git/docs/index4.markdown: (<unknown>): did not find expected key while parsing a block mapping at line 338 column 5
+```
+
+It could be one of several things on line 338:
+* A `:` was used at the end of sentences (especially at the end of a paragraph). Sometimes the colons are interpreted as key-value YAML delimiters (but not always). Use `&colon;` instead (or a period).
+* You have some leading tabs in front of the key-value definitions. It may actually be you can use tabs _or_ spaces, not mix them, but I replace all tabs with spaces.
+* You used a Markdown-style block quote (e.g., `> foo\n> bar`) in a definition. Replace it with an HTML blockquote. See an example in the definitions above.
+
+Other tips:
+* Put TWO blank lines between paragraphs. If you put just one, they will be joined into one paragraph when parsed by Jekyll's Liquid and/or Markdown engines. (I tried code hacks to fix this when loading, but nothing worked.) The single blank lines _between_ the YAML blocks (e.g., the one between "Vibe Engineering" and "Zero-Shot Prompt") are purely for legibility and have no affect on rendering.
+{% endcomment %}
+
 <h1>The AI Alliance Glossary of Terms</h1>
 
 <div id="preamble">

@@ -10,6 +10,26 @@ See the [repo README](https://github.com/The-AI-Alliance/glossary/) for addition
 
 The rest of this README provides information for contributors, developers, and users of this project repo.
 
+## Adding or Editing Terms
+
+All the terms are defined in a giant YAML block at the beginning of `docs/index.markdown`. If you edit the terms defined there or add new ones, here are a few tips to work around problems parsing the definitions as YAML (also in a comment in that file). 
+
+You may see obscure messages at the Jekyll console like this:
+
+```text
+YAML Exception reading /Users/deanwampler/ibm/ai-alliance/repos/others/glossary-git/docs/index4.markdown: (<unknown>): did not find expected key while parsing a block mapping at line 338 column 5
+```
+
+It could be one of several things on line 338 (in this example):
+
+* A `:` was used at the end of a sentence (especially at the end of a paragraph). Sometimes the colons are interpreted as key-value YAML delimiters (but not always). Use `&colon;` instead (or a period).
+* You have some leading tabs in front of the key-value definitions. It may actually be that you can use tabs _or_ spaces, not mix them, but I replace all tabs with spaces.
+* You used a Markdown-style block quote (e.g., `> foo\n> bar`) in a definition. Replace it with an HTML blockquote. See an example in the definitions in the file.
+
+Other tips:
+
+* Put **two** blank lines between paragraphs. If you put just one, they will be joined into one paragraph when parsed by Jekyll's Liquid and/or Markdown engines. (I tried code hacks to fix this when loading, but nothing worked.) The single blank lines _between_ the YAML blocks (e.g., the one between "Vibe Engineering" and "Zero-Shot Prompt" at the end of the YAML block in `docs/index.markdown`) are purely for legibility and have no affect on rendering.
+
 ## Getting Involved
 
 We welcome contributions as PRs. Please see our [Alliance community repo](https://github.com/The-AI-Alliance/community/) for general information about contributing to any of our projects. This section provides some specific details you need to know.
