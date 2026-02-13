@@ -137,6 +137,12 @@ See https://the-ai-alliance.github.io/open-trusted-data-initiative/ for an examp
   font: 0.75rem;
 }
 
+.toggle-btn {
+  @extend .keyword-btn;
+  @extend .btn-purple;
+  margin-bottom: 10px;
+}
+
 .category-btn {
   @extend .keyword-btn;
   @extend .btn-green;
@@ -155,6 +161,16 @@ h3.topic {
   @extend .btn-blue;
 }
 
+.go-to-top-btn {
+  @extend .keyword-btn;
+  @extend .btn-blue;
+}
+
+.bottomright {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
 
 .resizable {
   position: relative;
@@ -197,3 +213,6 @@ h3.topic {
   max-width: fit-content;
 }
 
+.toggle-button-div {
+  margin-bottom: 1rem !important;
+}

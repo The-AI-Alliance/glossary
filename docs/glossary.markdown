@@ -11,8 +11,8 @@ Some of the terms defined here are industry standards, while others are not stan
 
 Some definitions are adapted from the following sources, which are indicated below using the same numbers, i.e., [\[1\]](#mlc) and [\[2\]](#nist):
 
-1. <a id="mlc">[_MLCommons AI Safety v0.5 Benchmark Proof of Concept Technical Glossary_]({{site.baseurl}}/references/#mlcommons-glossary){:id="mlc-glossary"}
-2. <a id="nist">[_NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)_]({{site.baseurl}}/references/#nist-risk-management-framework){:id="nist-rmf"}
+1. <a id="mlc"></a>[_MLCommons AI Safety v0.5 Benchmark Proof of Concept Technical Glossary_]({{site.baseurl}}/references/#mlcommons-glossary){:target="mlc-glossary"}
+2. <a id="nist"></a>[_NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)_]({{site.baseurl}}/references/#nist-risk-management-framework){:target="nist-rmf"}
 
 Also, a few definitions quote the [_Merriam-Webster Dictionary_](https://www.merriam-webster.com/dictionary/){:target="mw-dict"}, where noted.
 
@@ -161,6 +161,10 @@ Additional information passed to an [LLM](#large-language-model) as part of a us
 ### Cohesion
 
 Does a [Component](#component) feel like &ldquo;one thing&rdquo; with a single purpose, exhibiting well-defined [Behaviors](#behavior) with a coherent [State](#state)? Or does it feel like a miscellaneous collection of behaviors or state?
+
+### Coding Agents
+
+An informal, but increasingly-popular term for AI tools that assist or automate software development tasks.
 
 ### Coupling
 
