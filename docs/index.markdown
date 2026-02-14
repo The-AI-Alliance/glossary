@@ -717,7 +717,7 @@ Other tips:
 		{% for letter in caps %}
 		<input type="button" value="{{ letter }}" onclick="return scroll_to_letter('{{ letter }}', 'terms');" id="{{ letter | downcase }}-letter-btn" class="letter-btn" />
 		{% endfor %}
-		<input type="text" id="filter-text" placeholder="Term Filter" style="width: auto;"/>
+		<input type="text" id="filter-text" placeholder="Term Filter" class="filter-text" />
 		<input type="button" value="Clear" id="filter-text-clear" class="toggle-btn" />
 	</div>
 </div>

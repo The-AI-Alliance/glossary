@@ -85,6 +85,12 @@ blockquote {
   font: 0.8rem "Fira Sans" sans-serif; 
 }
 
+.filter-text {
+  width: auto;
+  background-color: #F8FFF8;
+  border: solid 1px #CCCCCC;
+}
+
 .scrolling-div {
   overflow-y: auto; 
   max-height: 70vh;
@@ -201,7 +207,6 @@ h3.topic-btn {
 h3.topic {
   @extend .btn-blue;
 }
-
 
 #letter-navigation {
   margin-bottom: 15px;    
