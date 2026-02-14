@@ -258,7 +258,7 @@ terms:
 
       Guardrails often focus on user [Prompts](#prompt) and [Responses](#response), looking for undesirable content, such as hate speech, misinformation, hallucinations, hacking attempts, etc.
 
-  - name: GenerativeAdversarial Networks
+  - name: Generative Adversarial Networks
     description: 
       A GAN uses two neural networks that compete with each other in a &ldquo;zero-sum&rdquo; game, where one agent's gain is another agent's loss.
 
@@ -266,7 +266,7 @@ terms:
       Quoting from the [Wikipedia page on GANs](https://en.wikipedia.org/wiki/Generative_adversarial_network){:target="_wikipedia"}&#58;
 
 
-      <blockquote class="attention">
+      <blockquote class="note">
         <p>Given a training data set, this technique learns to generate new data with the same statistics as the training set. For example, a GAN trained on photographs can generate new photographs that look at least superficially authentic to human observers, having many realistic characteristics...</p>
         <p>The core idea of a GAN is based on the "indirect" training through the discriminator, another neural network that can tell how "realistic" the input seems, which itself is also being updated dynamically. This means that the generator is not trained to minimize the distance to a specific image, but rather to fool the discriminator. This enables the model to learn in an unsupervised manner.</p>
       </blockquote>
@@ -274,7 +274,7 @@ terms:
 
       The &ldquo;adversarial&rdquo; part is how the generator attempts to _fool_ the discriminator, which learns to detect these situations.
 
-  - name: GenerativeAI Model
+  - name: Generative AI Model
     description: 
       A combination of data and code, usually trained on a [Data Set](#data-set), to support [Inference](#inference) of some kind. 
 
@@ -722,7 +722,7 @@ Other tips:
 	</div>
 </div>
 
-<div id="terms" class="scrolling-div">
+<div id="terms" class="scrolling-div attention">
   <a id="go-to-top"></a>
 {% include terms %}
   <a id="go-to-top"></a>

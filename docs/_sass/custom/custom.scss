@@ -87,7 +87,12 @@ blockquote {
 
 .scrolling-div {
   overflow-y: auto; 
-  max-height: 65vh;
+  max-height: 70vh;
+  padding: 5px;
+  /*
+  border: solid 1px $yellow-100;
+  background-color: #FAFAFA;
+  */
 }
 
 /* 
