@@ -22,9 +22,9 @@ YAML Exception reading /Users/deanwampler/ibm/ai-alliance/repos/others/glossary-
 
 It could be one of several things on line 338 (in this example):
 
-* A `:` was used at the end of a sentence (especially at the end of a paragraph). Sometimes the colons are interpreted as key-value YAML delimiters (but not always). Use `&colon;` instead (or a period).
+* A `:` was used at the end of a sentence (especially at the end of a paragraph). Sometimes the colons are interpreted as key-value YAML delimiters (but not always). Use `&#58;` instead (or use a period). Note, it appears that `&colon;` doesn't work!
 * You have some leading tabs in front of the key-value definitions. It may actually be that you can use tabs _or_ spaces, not mix them, but I replace all tabs with spaces.
-* You used a Markdown-style block quote (e.g., `> foo\n> bar`) in a definition. Replace it with an HTML blockquote. See an example in the definitions in the file.
+* You used a Markdown-style block quote (e.g., `> foo\n> bar`) in a definition. Replace it with an HTML `blockquote`. See an example in the definitions in `docs/index.markdown`.
 
 Other tips:
 

@@ -85,6 +85,11 @@ blockquote {
   font: 0.8rem "Fira Sans" sans-serif; 
 }
 
+.scrolling-div {
+  overflow-y: auto; 
+  max-height: 65vh;
+}
+
 /* 
 Based on .site-header, but more flexible. 
 */
@@ -96,6 +101,18 @@ Based on .site-header, but more flexible.
   align-items: center;
 }
 
+html {
+/*
+  scroll-margin-top: 4rem;
+  scroll-padding-top: 8rem;
+*/
+}
+
+.letter-navigation {
+  height: 3rem;
+  position: sticky;
+  top: 0;
+}
 .banner {
   @include mq(md) {
     /*
@@ -139,8 +156,27 @@ See https://the-ai-alliance.github.io/open-trusted-data-initiative/ for an examp
 
 .toggle-btn {
   @extend .keyword-btn;
-  @extend .btn-purple;
-  margin-bottom: 10px;
+  @extend .btn-primary;
+  text-align: left;
+  margin: 5px;  
+}
+
+.letter-btn {
+  @extend .keyword-btn;
+  @extend .btn-green;
+  text-align: left;
+  margin-top: 5px;  
+  margin-bottom: 5px;  
+  width: 3rem;
+}
+
+.go-to-btn {
+  @extend .keyword-btn;
+  @extend .btn-green;
+  text-align: left;
+  margin-top: 5px;  
+  margin-bottom: 5px;  
+  width: 3rem;
 }
 
 .category-btn {
@@ -161,16 +197,34 @@ h3.topic {
   @extend .btn-blue;
 }
 
-.go-to-top-btn {
-  @extend .keyword-btn;
-  @extend .btn-blue;
+
+#letter-navigation {
+  margin-bottom: 15px;    
 }
 
-.bottomright {
+.right {
+  position: fixed;
+  right: 50px; 
+}
+
+.bottom-left {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+}
+
+.bottom-right {
   position: fixed;
   bottom: 0px;
   right: 0px;
 }
+
+.stay-on-top {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+}
+
 
 .resizable {
   position: relative;

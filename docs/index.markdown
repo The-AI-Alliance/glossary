@@ -41,7 +41,7 @@ terms:
       A term coined by [Andrej Karpathy](https://x.com/karpathy/status/2019137879310836075){:target="kpx"} to represent a more careful engineering approach to AI-driven software development than [Vibe Coding](#vibe-coding), the term he coined for more &ldquo;one-off&rdquo; use of AI for generation of proofs of concepts, etc., but not suitable for developing applications that need long-term evolution and maintenance. 
 
 
-      His reasoning for this choice of words is as follows (quoting from the tweet, with &ldquo;light&rdquo; editing)&colon; 
+      His reasoning for this choice of words is as follows (quoting from the tweet, with &ldquo;light&rdquo; editing)&#58; 
 
 
       * **Agentic** because the new default is that you are not writing the code directly 99% of the time, you are orchestrating agents who do and acting as oversight.
@@ -84,7 +84,7 @@ terms:
 
   - name: Benchmark
     description: 
-      A methodology or [Function](#function) used for offline [Evaluation](#evaluation) of a [Generative AI Model](#generative-ai-model) or [AI System](#ai-system) for a particular purpose and to interpret the results [\[1\]](#mlc). It consists of the following&colon;
+      A methodology or [Function](#function) used for offline [Evaluation](#evaluation) of a [Generative AI Model](#generative-ai-model) or [AI System](#ai-system) for a particular purpose and to interpret the results [\[1\]](#mlc). It consists of the following&#58;
 
 
       * A set of tests with metrics.
@@ -112,7 +112,7 @@ terms:
 
   - name: Coding Agent
     description: 
-      An AI-powered IDE or tool specifically designed for AI-assisted software development. Here is a partial list of _coding agents_ (at the time of this writing)&colon;
+      An AI-powered IDE or tool specifically designed for AI-assisted software development. Here is a partial list of _coding agents_ (at the time of this writing)&#58;
 
 
       * [AWS Kiro](https://kiro.dev/){:target="_blank"} (an AI IDE designed to support [Specification-Driven Development](#specification-driven-development))
@@ -263,7 +263,7 @@ terms:
       A GAN uses two neural networks that compete with each other in a &ldquo;zero-sum&rdquo; game, where one agent's gain is another agent's loss.
 
 
-      Quoting from the [Wikipedia page on GANs](https://en.wikipedia.org/wiki/Generative_adversarial_network){:target="_wikipedia"}&colon;
+      Quoting from the [Wikipedia page on GANs](https://en.wikipedia.org/wiki/Generative_adversarial_network){:target="_wikipedia"}&#58;
 
 
       <blockquote class="attention">
@@ -327,7 +327,7 @@ terms:
       Labeled data contains content used to train a model and corresponding _labels_ of expected outcomes. A classic example is a labeled data set for [Training](#training) a SPAM filter, where example emails are labeled SPAM or not SPAM. In contrast, [Unlabeled Data](#unlabeled-data) contains no such labels. Labeled data is used in model [Tuning](#tuning), while sets of unlabeled data are used for training raw [Generative AI Models](#generative-ai-models). 
 
 
-      In the context of [Generative AI Models](#generative-ai-models), there are several popular formats for labeled data&colon;
+      In the context of [Generative AI Models](#generative-ai-models), there are several popular formats for labeled data&#58;
 
 
       * **Question and answer (Q&A) pairs:** A set of [Prompts](#prompt), such as questions or instructions to do tasks, accompanied by answers or expected [Responses](#response).
@@ -344,7 +344,7 @@ terms:
 
   - name: Model Context Protocol
     description: 
-      Abbreviated MCP, a de-facto standard protocol for communications between models, agents, tools, and services, including auto-discovery. See the AI Alliance's [MCP (and Beyond) in the Enterprise&colon; A User Guide ](https://the-ai-alliance.github.io/enterprise-MCP/){:target="mcp"} and [modelcontextprotocol.io](https://modelcontextprotocol.io/introduction){:target="_blank"} for more information.
+      Abbreviated MCP, a de-facto standard protocol for communications between models, agents, tools, and services, including auto-discovery. See the AI Alliance's [MCP (and Beyond) in the Enterprise&#58; A User Guide ](https://the-ai-alliance.github.io/enterprise-MCP/){:target="mcp"} and [modelcontextprotocol.io](https://modelcontextprotocol.io/introduction){:target="_blank"} for more information.
 
   - name: Multimodal Model
     description: 
@@ -582,7 +582,7 @@ terms:
 
   - name: Test-Driven Development
     description: 
-      When adding a [Feature](#feature) to a code base using _TDD_, the tests are written _before_ the code is written. A three step &ldquo;virtuous&rdquo; cycle is used, where changes are made _incrementally_ and _iterative_ using small steps, one at a time&colon;
+      When adding a [Feature](#feature) to a code base using _TDD_, the tests are written _before_ the code is written. A three step &ldquo;virtuous&rdquo; cycle is used, where changes are made _incrementally_ and _iterative_ using small steps, one at a time&#58;
 
 
       1. [Refactor](#refactoring) the code to change its structure as required to support the new feature, using the existing automated [Tests](#test) to verify that no regressions are introduced. For example, it might be necessary to introduce an abstraction to support two &ldquo;choices&rdquo; where previously only one choice existed.
@@ -670,26 +670,25 @@ YAML Exception reading /Users/deanwampler/ibm/ai-alliance/repos/others/glossary-
 ```
 
 It could be one of several things on line 338:
-* A `:` was used at the end of sentences (especially at the end of a paragraph). Sometimes the colons are interpreted as key-value YAML delimiters (but not always). Use `&colon;` instead (or a period).
+* A `:` was used at the end of sentences (especially at the end of a paragraph). Sometimes the colons are interpreted as key-value YAML delimiters (but not always). Use `&#58;` instead (or a period).
 * You have some leading tabs in front of the key-value definitions. It may actually be you can use tabs _or_ spaces, not mix them, but I replace all tabs with spaces.
-* You used a Markdown-style block quote (e.g., `> foo\n> bar`) in a definition. Replace it with an HTML blockquote. See an example in the definitions above.
+* You used a Markdown-style block quote (e.g., `> foo\n> bar`) in a definition. Replace it with an HTML `blockquote`. See an example in the definitions above.
 
 Other tips:
 * Put TWO blank lines between paragraphs. If you put just one, they will be joined into one paragraph when parsed by Jekyll's Liquid and/or Markdown engines. (I tried code hacks to fix this when loading, but nothing worked.) The single blank lines _between_ the YAML blocks (e.g., the one between "Vibe Engineering" and "Zero-Shot Prompt") are purely for legibility and have no affect on rendering.
 {% endcomment %}
 
-<h1>The AI Alliance Glossary of Terms</h1>
-
-<div id="preamble">
-	<p>Welcome to the <strong>The AI Alliance Glossary</strong>, a resource shared across our websites to provide shared definitions of common terms.</p>
-	<div class="toggle-button-div">
-		<form>
-			<input type="button" value="Show Notes" accesskey="s" id="notes-on-glossary-toggle" class="toggle-btn" style="margin-bottom:150px;" />
-		</form>
-	</div>
+<h1>The AI Alliance Glossary of Terms <span style="width:25px; display: inline-block;">&nbsp;</span><a href="#" id="notes-on-glossary-toggle" class="toggle-btn">?</a></h1>
+<!--
+<h1>The AI Alliance Glossary of Terms <span class="right"><input type="button" value="Show Notes" accesskey="s" id="notes-on-glossary-toggle2" class="toggle-btn" style="margin-bottom:150px;" /></span></h1>
+-->
+<div id="glossary-preamble">
+	{% comment %}
+	{% endcomment %}
 	<div id="notes-on-glossary">
 		<blockquote class="notes">
-			<h3>How to Use this Glossary</h3>
+			<h3>About this Glossary</h3>
+			<p>Welcome to the <strong>The AI Alliance Glossary</strong>, a resource shared across our websites to provide shared definitions of common terms.</p>
 			<p>The <strong>filter</strong> below filters by term names, while the <strong>search</strong> above searches all the text in this site.</p>
 			<p>Some of the terms defined here are industry standards, while others are not standard, but they are useful for our purposes. Some definitions are adapted from the following sources, which are indicated below using the same numbers, i.e., <a href="#mlc">[1]</a> and <a href="#nist">[2]</a>:</p>
 
@@ -713,22 +712,30 @@ Other tips:
 	{% comment %}
 	See comment in "terms" about this letter range hack.
 	{% endcomment %}
-	{% assign caps = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z" | split: "," %}
-	{% for letter in caps %}
-	<a href="#{{ letter | downcase }}" class="category-btn">{{letter}}</a>
-	{% endfor %}
-	<form>
-		<label>Filter: </label>
-		<input type="text" id="filter-text" size=45/>
-		<label id="filter-text-clear" class="toggle-btn">Clear</label>
-	</form>
+	<div id="letter-navigation">
+ 		{% assign caps = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z" | split: "," %}
+		{% for letter in caps %}
+		<input type="button" value="{{ letter }}" onclick="return scroll_to_letter('{{ letter }}', 'terms');" id="{{ letter | downcase }}-letter-btn" class="letter-btn" />
+		{% endfor %}
+		<input type="text" id="filter-text" placeholder="Term Filter" style="width: auto;"/>
+		<input type="button" value="Clear" id="filter-text-clear" class="toggle-btn" />
+	</div>
 </div>
 
-<div id="catalog">
+<div id="terms" class="scrolling-div">
+  <a id="go-to-top"></a>
 {% include terms %}
+  <a id="go-to-top"></a>
 </div>
+<!--
+Not currently needed:
+<input type="button" id="go-to-top-btn" class="toggle-btn" value="&#8593;"/>
+-->
+
 
 <script type="text/javascript"> 
 	add_toggle("notes-on-glossary-toggle", "notes-on-glossary", true);
 	add_filter("filter-text");
+	// Not currently needed:
+	// add_scroll_to_top("go-to-top-btn", "terms", "top");
 </script>

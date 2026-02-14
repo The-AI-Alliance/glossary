@@ -91,8 +91,8 @@ enable_copy_code_button: true
 # Footer content
 # appears at the bottom of every page's main content
 
-# Back to top link
-back_to_top: true
+# Back to top link (We don't use this feature for here)
+back_to_top: false
 back_to_top_text: "Back to the top"
 
 # Footer last edited timestamp
