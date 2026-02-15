@@ -1,4 +1,4 @@
 ---
 layout: redirect
-redirect_rel_url: /glossary/
+redirect_url: /glossary/
 ---
