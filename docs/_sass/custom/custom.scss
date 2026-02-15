@@ -82,12 +82,38 @@ blockquote {
 
 .description {
   width: 100%;
-  font: 0.8rem "Fira Sans" sans-serif; 
+  font-size: 1.0rem;
+}
+
+.term-display {
+  a {
+    color: #694b68; /* #592b48; #34192a; #342f16; #26517f; */
+    text-decoration: underline; 
+    text-decoration-style: dotted;
+    /* font-weight: bold; */
+  }
+  a:hover {
+    background: #FFFFFF; /* #96b2b9; #D3BF59; */
+    /* color: #534b23; /* #112337; */
+  }
+
+  .term-title {
+    color: #694b68; /* #534b23; #112337; */
+  }
+
+  .term-definition {
+    padding-left: 10px;
+  }
 }
 
 .filter-text {
   width: auto;
-  background-color: #F8FFF8;
+  background-color: #F8F8FE;
+  border: solid 1px #CCCCCC;
+}
+
+.term-display {
+  background-color: #F8F8FE;
   border: solid 1px #CCCCCC;
 }
 
@@ -95,10 +121,6 @@ blockquote {
   overflow-y: auto; 
   max-height: 70vh;
   padding: 5px;
-  /*
-  border: solid 1px $yellow-100;
-  background-color: #FAFAFA;
-  */
 }
 
 /* 

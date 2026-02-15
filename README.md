@@ -12,7 +12,7 @@ The rest of this README provides information for contributors, developers, and u
 
 ## Adding or Editing Terms
 
-All the terms are defined in a giant YAML block at the beginning of `docs/index.markdown`. If you edit the terms defined there or add new ones, here are a few tips to work around problems parsing the definitions as YAML (also in a comment in that file). 
+All the terms are defined in a giant YAML block at the beginning of `docs/index.markdown`. If you edit the terms defined there or add new ones, here are a few tips to work around problems parsing the definitions as YAML (also in a comment in that file). Using YAML declarations for this content definitely has pluses and minuses...
 
 You may see obscure messages at the Jekyll console like this:
 
@@ -28,6 +28,7 @@ It could be one of several things on line 338 (in this example):
 
 Other tips:
 
+* For lists, _only use_ ordered lists with `1.`; don't use `*` or `-` bullets. This causes a weird behavior where those bullets are rendered _by themselves_ down the page, well past the term viewer, causing the browser to show a big scroll bar with nearly empty content below the term viewer! "Nearly empty", because you notice groups of dots if look carefully. Just use numbered itemized lists... 
 * Put **two** blank lines between paragraphs. If you put just one, they will be joined into one paragraph when parsed by Jekyll's Liquid and/or Markdown engines. (I tried code hacks to fix this when loading, but nothing worked.) The single blank lines _between_ the YAML blocks (e.g., the one between "Vibe Engineering" and "Zero-Shot Prompt" at the end of the YAML block in `docs/index.markdown`) are purely for legibility and have no affect on rendering.
 
 ## Getting Involved

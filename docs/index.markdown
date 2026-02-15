@@ -44,9 +44,9 @@ terms:
       His reasoning for this choice of words is as follows (quoting from the tweet, with &ldquo;light&rdquo; editing)&#58; 
 
 
-      * **Agentic** because the new default is that you are not writing the code directly 99% of the time, you are orchestrating agents who do and acting as oversight.
+      1. **Agentic** because the new default is that you are not writing the code directly 99% of the time, you are orchestrating agents who do and acting as oversight.
 
-      * **Engineering** to emphasize that there is an art & science and expertise to it. It's something you can learn and become better at, with its own depth of a different kind.
+      1. **Engineering** to emphasize that there is an art & science and expertise to it. It's something you can learn and become better at, with its own depth of a different kind.
 
 
       See also [Vibe Engineering](#vibe-engineering).
@@ -87,9 +87,9 @@ terms:
       A methodology or [Function](#function) used for offline [Evaluation](#evaluation) of a [Generative AI Model](#generative-ai-model) or [AI System](#ai-system) for a particular purpose and to interpret the results [\[1\]](#mlc). It consists of the following&#58;
 
 
-      * A set of tests with metrics.
+      1. A set of tests with metrics.
 
-      * A summarization of the results.
+      1. A summarization of the results.
 
 
       See also [Unit Benchmark](#unit-benchmark), [Integration Benchmark](#integration-benchmark), and [Acceptance Benchmark](#acceptance-benchmark).
@@ -115,21 +115,21 @@ terms:
       An AI-powered IDE or tool specifically designed for AI-assisted software development. Here is a partial list of _coding agents_ (at the time of this writing)&#58;
 
 
-      * [AWS Kiro](https://kiro.dev/){:target="_blank"} (an AI IDE designed to support [Specification-Driven Development](#specification-driven-development))
+      1. [AWS Kiro](https://kiro.dev/){:target="_blank"} (an AI IDE designed to support [Specification-Driven Development](#specification-driven-development))
 
-      * [Gemini CLI](https://github.com/google-gemini/gemini-cli){:target="_blank"}
+      1. [Gemini CLI](https://github.com/google-gemini/gemini-cli){:target="_blank"}
 
-      * [Claude Code](https://www.anthropic.com/claude-code){:target="_blank"}
+      1. [Claude Code](https://www.anthropic.com/claude-code){:target="_blank"}
 
-      * [Cline](https://cline.bot/){:target="_blank"}
+      1. [Cline](https://cline.bot/){:target="_blank"}
 
-      * [Cursor](https://cursor.com/){:target="_blank"}
+      1. [Cursor](https://cursor.com/){:target="_blank"}
 
-      * [GitHub Copilot](https://code.visualstudio.com/){:target="_blank"}
+      1. [GitHub Copilot](https://code.visualstudio.com/){:target="_blank"}
 
-      * [Roo Code](https://roocode.com/){:target="_blank"}
+      1. [Roo Code](https://roocode.com/){:target="_blank"}
 
-      * [Windsurf](https://windsurf.com/){:target="_blank"}
+      1. [Windsurf](https://windsurf.com/){:target="_blank"}
 
   - name: Component
     description: 
@@ -150,10 +150,6 @@ terms:
     description: 
       Does a [Component](#component) feel like &ldquo;one thing&rdquo; with a single purpose, exhibiting well-defined [Behaviors](#behavior) with a coherent [State](#state)? Or does it feel like a miscellaneous collection of behaviors or state?
 
-  - name: Coding Agents
-    description: 
-      An informal, but increasingly-popular term for AI tools that assist or automate software development tasks.
-
   - name: Coupling
     description: 
       How closely connected is one [Component](#component) to others in the system? &ldquo;Loose&rdquo; coupling is preferred, because it makes it easier to test components in isolation, substitute replacements when needed, etc. Strongly coupled components often indicate poor abstraction boundaries between them.
@@ -166,9 +162,9 @@ terms:
     description: 
       Sometimes written _dataset_, a collection of data items used for training, evaluation, etc. Usually, a given data set has a schema (which may simply be &ldquo;unstructured text&rdquo;) and some metadata that may include information about provenance, license for use (which may specify disallowed uses), target uses, transformations and filters applied, etc. [\[1\]](#mlc).
 
-  - name: Designby Contract
+  - name: Design By Contract
     description: 
-      The idea of [Design by Contract](https://en.wikipedia.org/wiki/Design_by_contract){:target="_wikipedia"} (&ldquo;DbC&rdquo;) was developed by [Bertrand Meyer](https://en.wikipedia.org/wiki/Bertrand_Meyer){:target="_wikipedia"} and incorporated into his [Eiffel](https://en.wikipedia.org/wiki/Eiffel_(programming_language)){:target="_wikipedia"} programming language. In Eiffel all functions can define a _contract_ for allowed inputs, invariants, and guaranteed responses, if the input requirements are met. The runtime system would handle any failures of these contracts. A _core principle_ of DbC use is that contract failures should terminate the application immediately, forcing the developers to fix the issue. Failure to do so becomes an excuse to let bugs accumulate. If this principle was rigorously followed during development, it is often considered acceptable (or at least &ldquo;expedient&rdquo;), to log contract failures, but not terminate execution in production runs. DbC can be used in other languages through built-in features (like _assertions_), libraries, or various runtime features.
+      The idea of [Design By Contract](https://en.wikipedia.org/wiki/Design_by_contract){:target="_wikipedia"} (&ldquo;DbC&rdquo;) was developed by [Bertrand Meyer](https://en.wikipedia.org/wiki/Bertrand_Meyer){:target="_wikipedia"} and incorporated into his [Eiffel](https://en.wikipedia.org/wiki/Eiffel_(programming_language)){:target="_wikipedia"} programming language. In Eiffel all functions can define a _contract_ for allowed inputs, invariants, and guaranteed responses, if the input requirements are met. The runtime system would handle any failures of these contracts. A _core principle_ of DbC use is that contract failures should terminate the application immediately, forcing the developers to fix the issue. Failure to do so becomes an excuse to let bugs accumulate. If this principle was rigorously followed during development, it is often considered acceptable (or at least &ldquo;expedient&rdquo;), to log contract failures, but not terminate execution in production runs. DbC can be used in other languages through built-in features (like _assertions_), libraries, or various runtime features.
 
 
       DbC provides many of the same design benefits provided by [TDD](#test-driven-development), which emerged later, such as directing attention to more rigorous API design. Because of the additional benefits of TDD, DbC has largely fallen out of practice, but it's formalism for what constitutes good contracts is still highly valuable and recommended for study. 
@@ -180,7 +176,7 @@ terms:
 
       In contrast, _nondeterminism_ means identical inputs yield different results, removing [Repeatability](#Repeatable) and complicating [Predictability](#predictable), and the ability to write automated, reliable tests.
 
-  - name: DirectPreference Optimization
+  - name: Direct Preference Optimization
     description: 
       TODO.
 
@@ -330,9 +326,9 @@ terms:
       In the context of [Generative AI Models](#generative-ai-models), there are several popular formats for labeled data&#58;
 
 
-      * **Question and answer (Q&A) pairs:** A set of [Prompts](#prompt), such as questions or instructions to do tasks, accompanied by answers or expected [Responses](#response).
+      1. **Question and answer (Q&A) pairs:** A set of [Prompts](#prompt), such as questions or instructions to do tasks, accompanied by answers or expected [Responses](#response).
 
-      * **Preference data:** Similar to Q&A pairs, but in addition to the _preferred_ or _chosen_ answer, a _rejected_ answer is provided, which supports teaching about responses that are good as well as bad.
+      1. **Preference data:** Similar to Q&A pairs, but in addition to the _preferred_ or _chosen_ answer, a _rejected_ answer is provided, which supports teaching about responses that are good as well as bad.
 
   - name: Large Language Model
     description: 
@@ -663,7 +659,9 @@ terms:
 ---
 
 {% comment %}
-For maintainers, if you edit the terms defined above or add new ones, here are a few tips to work around problems parsing the definitions as YAML (also in the README). You may see obscure messages at the Jekyll console like this:
+For maintainers, if you edit the terms defined above or add new ones, here are a few tips to work around problems parsing the definitions as YAML (also in the README). Using YAML declarations for this content definitely has pluses and minuses...
+
+You may see obscure messages at the Jekyll console like this:
 
 ```
 YAML Exception reading /Users/deanwampler/ibm/ai-alliance/repos/others/glossary-git/docs/index4.markdown: (<unknown>): did not find expected key while parsing a block mapping at line 338 column 5
@@ -675,13 +673,11 @@ It could be one of several things on line 338:
 * You used a Markdown-style block quote (e.g., `> foo\n> bar`) in a definition. Replace it with an HTML `blockquote`. See an example in the definitions above.
 
 Other tips:
+* For lists, only use ordered lists with `1.`; don't use `*` or `-` bullets. This causes a weird behavior where those bullets are rendered _by themselves_ down the page, well past the term viewer, causing the browser to show a big scroll bar with nearly empty content below the term viewer! "Nearly empty", because you notice groups of dots if look carefully. Just use numbered itemized lists... 
 * Put TWO blank lines between paragraphs. If you put just one, they will be joined into one paragraph when parsed by Jekyll's Liquid and/or Markdown engines. (I tried code hacks to fix this when loading, but nothing worked.) The single blank lines _between_ the YAML blocks (e.g., the one between "Vibe Engineering" and "Zero-Shot Prompt") are purely for legibility and have no affect on rendering.
 {% endcomment %}
 
 <h1>The AI Alliance Glossary of Terms <span style="width:25px; display: inline-block;">&nbsp;</span><a href="#" id="notes-on-glossary-toggle" class="toggle-btn">?</a></h1>
-<!--
-<h1>The AI Alliance Glossary of Terms <span class="right"><input type="button" value="Show Notes" accesskey="s" id="notes-on-glossary-toggle2" class="toggle-btn" style="margin-bottom:150px;" /></span></h1>
--->
 <div id="glossary-preamble">
 	{% comment %}
 	{% endcomment %}
@@ -690,7 +686,8 @@ Other tips:
 			<h3>About this Glossary</h3>
 			<p>Welcome to the <strong>The AI Alliance Glossary</strong>, a resource shared across our websites to provide shared definitions of common terms.</p>
 			<p>The <strong>filter</strong> below filters by term names, while the <strong>search</strong> above searches all the text in this site.</p>
-			<p>Some of the terms defined here are industry standards, while others are not standard, but they are useful for our purposes. Some definitions are adapted from the following sources, which are indicated below using the same numbers, i.e., <a href="#mlc">[1]</a> and <a href="#nist">[2]</a>:</p>
+
+			<p>Some of the terms defined here are industry standards, while others are more informal, but still useful for our purposes. Some definitions are adapted from the following sources, which are indicated below using the same numbers, i.e., <a href="#mlc">[1]</a> and <a href="#nist">[2]</a>:</p>
 
 			<a id="mlc"></a>
 			<a id="nist"></a>
@@ -705,7 +702,7 @@ Other tips:
 
 			<p>Also, a few definitions quote the <a href="https://www.merriam-webster.com/dictionary/" target="mw-dict"><em>Merriam-Webster Dictionary</em></a>, where noted.</p>
 
-			<p>Sometimes we will show a term in <em>italics</em> without a definition. This is done for brevity and the usual, plain-sense meaning for the term can be assumed in the context where it appears. For hyphenated terms, we use <em>Foo-Bar-Baz</em> rather than <em>Foo-bar-baz</em>, since the former is a little more common in industry usage.</p>
+			<p>Sometimes we will show a term in <em>italics</em> without a definition. This is done for brevity and the usual, plain-sense meaning for the term can be assumed in the context where it appears. For hyphenated terms, we use <strong>Foo-Bar-Baz</strong> rather than <strong>Foo-bar-baz</strong>, since the former is a little more common in industry usage.</p>
 		</blockquote>
 	</div>
 
@@ -722,15 +719,15 @@ Other tips:
 	</div>
 </div>
 
-<div id="terms" class="scrolling-div attention">
+<div id="terms" class="scrolling-div term-display description">
   <a id="go-to-top"></a>
 {% include terms %}
   <a id="go-to-top"></a>
 </div>
-<!--
+{% comment %}
 Not currently needed:
 <input type="button" id="go-to-top-btn" class="toggle-btn" value="&#8593;"/>
--->
+{% endcomment %}
 
 
 <script type="text/javascript"> 

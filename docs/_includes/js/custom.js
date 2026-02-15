@@ -19,8 +19,10 @@ function add_filter(filterId) {
 	isFiltered = false;
 	const filter = document.getElementById(filterId);
 	const setAll = function(tf) {
-		filter.value = "";
 		nodeList = document.querySelectorAll(`[id$=-filter-div]`);
+		if (tf) {
+			console.log(nodeList);
+		}
 		for (let i = 0; i < nodeList.length; i++) {
 			let item = nodeList[i];
 			item.disabled = tf;
@@ -30,8 +32,9 @@ function add_filter(filterId) {
 	const disableAll = function() { setAll(true); }
 	const enableAll  = function() { setAll(false); }
 	const reset = function(e) {
-		enableAll();
+		filter.value = "";
 		isFiltered = false;
+		enableAll();
 	}
 	const inputHandler = function(e) {
 		if (!isFiltered) {
@@ -42,29 +45,31 @@ function add_filter(filterId) {
 		if (text) {
 			let text_  = text.replace(" ", "-");
 			nodeList = document.querySelectorAll(`[id$=-filter-div]`);
-			list = [];
-			list2 = [];
+			list_not_hidden = [];
+			list_hidden = [];
 			for (let i = 0; i < nodeList.length; i++) {
 				let item = nodeList[i];
 				let itemId = item.id.replace("-filter-div", "");
 				if (itemId.indexOf(text_) >= 0) {
 					item.disabled = false;
 					item.hidden = false;
-					list.push(item);
+					list_not_hidden.push(item);
 				} else {
 					item.disabled = true;
 					item.hidden = true;
-					list2.push(item);
+					list_hidden.push(item);
 				}
 			}
+			console.log(list_hidden)
 		} else {
 			enableAll();
 		}
+		return true;
 	}
 	filter.addEventListener("input", inputHandler);
-	filter.addEventListener("propertychange", inputHandler); // for IE8
+	// filter.addEventListener("propertychange", inputHandler); // for IE8
 	// Firefox/Edge18-/IE9+ don’t fire on <select><option>
-	// source.addEventListener("change", inputHandler); 
+	// filter.addEventListener("change", inputHandler); 
 	const filterClear = document.getElementById(`${filterId}-clear`);
 	filterClear.addEventListener("click", reset);
 }

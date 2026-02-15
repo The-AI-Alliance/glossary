@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: AI Alliance Glossary
+title: The AI Alliance Glossary
 email: contact@thealliance.ai
 description: >- # this means to ignore newlines until "baseurl:"
-  A shared glossary across all AI Alliance websites and assets.
+  A shared glossary across all the AI Alliance websites and assets.
 baseurl: "/glossary" # the subpath of your site.
 url: "https://the-ai-alliance.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -94,6 +94,12 @@ enable_copy_code_button: true
 # Back to top link (We don't use this feature for here)
 back_to_top: false
 back_to_top_text: "Back to the top"
+
+# Show Footer (Added by AIA team). 
+# "show_footer" applies to the main footer in the content, while 
+# "show_side_bar_footer" applies to the footer in the sidebar.
+show_footer: false
+show_side_bar_footer: true
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter

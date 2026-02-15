@@ -29,7 +29,7 @@ works with integers.
     {% for i in (lli1..max_caps_index) %}
       {% assign letter = caps[i] %}
       {% assign letter_lower = letter | downcase %}
-      <span id="{{letter_lower}}-filter-div" class="category-btn"><a id="{{letter_lower}}"></a>{{letter}}</span>
+      <div id="{{letter_lower}}-filter-div" class="category-btn"><a id="{{letter_lower}}"></a>{{letter}}</div>
       {% if letter == current_letter %}
         {% assign last_letter_index = i %}
         {% break %}
@@ -39,9 +39,9 @@ works with integers.
 
   <a id="{{key}}"></a>
   <div id="{{key}}-filter-div">
-    <h3><a href="#{{key}}" class="anchor-heading" aria-labelledby="{{key}}"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> {{term.name}}</h3>
+    <h3 class="term-title"><a href="#{{key}}" class="anchor-heading" aria-labelledby="{{key}}"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> {{term.name}}</h3>
 
-    {{term.description | markdownify | htmlify}}
+    <div class="term-definition">{{term.description | markdownify | htmlify}}</div>
   </div>
 
 {% endfor %}
