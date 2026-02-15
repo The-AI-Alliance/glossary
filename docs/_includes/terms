@@ -1,0 +1,47 @@
+{% comment %}
+Use a hack for the range of letters between A and Z. The Liquid range support only
+works with integers.
+{% endcomment %}
+{% assign caps = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z" | split: "," %}
+{% assign max_caps_index = caps.size | plus: -1 %}
+{% assign last_letter = '' %}
+{% assign last_letter_index = -1 %}
+
+{% for term in page.terms %}
+
+  {% if term.key %}
+    {% assign key = term.key %}
+  {% else %}
+    {% assign key = term.name | downcase | replace: " ", "-" %}
+  {% endif %}
+
+  {% assign current_letter = term.name | slice: 0 %}
+
+  {% if last_letter != current_letter %}
+    {% assign last_letter = current_letter %}
+
+    {% comment %}
+    Iterate from the next letter after the last to the current letter and print h2's
+    for each one. We can't just assume that letters aren't skipped, like "Q" or "XY"
+    might be.
+    {% endcomment %}
+    {% assign lli1 = last_letter_index | plus: 1 %}
+    {% for i in (lli1..max_caps_index) %}
+      {% assign letter = caps[i] %}
+      {% assign letter_lower = letter | downcase %}
+      <div id="{{letter_lower}}-filter-div" class="category-btn"><a id="{{letter_lower}}"></a>{{letter}}</div>
+      {% if letter == current_letter %}
+        {% assign last_letter_index = i %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  <a id="{{key}}"></a>
+  <div id="{{key}}-filter-div">
+    <h3 class="term-title"><a href="#{{key}}" class="anchor-heading" aria-labelledby="{{key}}"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> {{term.name}}</h3>
+
+    <div class="term-definition">{{term.description | markdownify | htmlify}}</div>
+  </div>
+
+{% endfor %}

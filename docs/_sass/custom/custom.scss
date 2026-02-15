@@ -82,7 +82,45 @@ blockquote {
 
 .description {
   width: 100%;
-  font: 0.8rem "Fira Sans" sans-serif; 
+  font-size: 1.0rem;
+}
+
+.term-display {
+  a {
+    color: #694b68; /* #592b48; #34192a; #342f16; #26517f; */
+    text-decoration: underline; 
+    text-decoration-style: dotted;
+    /* font-weight: bold; */
+  }
+  a:hover {
+    background: #FFFFFF; /* #96b2b9; #D3BF59; */
+    /* color: #534b23; /* #112337; */
+  }
+
+  .term-title {
+    color: #694b68; /* #534b23; #112337; */
+  }
+
+  .term-definition {
+    padding-left: 10px;
+  }
+}
+
+.filter-text {
+  width: auto;
+  background-color: #F8F8FE;
+  border: solid 1px #CCCCCC;
+}
+
+.term-display {
+  background-color: #F8F8FE;
+  border: solid 1px #CCCCCC;
+}
+
+.scrolling-div {
+  overflow-y: auto; 
+  max-height: 70vh;
+  padding: 5px;
 }
 
 /* 
@@ -96,6 +134,18 @@ Based on .site-header, but more flexible.
   align-items: center;
 }
 
+html {
+/*
+  scroll-margin-top: 4rem;
+  scroll-padding-top: 8rem;
+*/
+}
+
+.letter-navigation {
+  height: 3rem;
+  position: sticky;
+  top: 0;
+}
 .banner {
   @include mq(md) {
     /*
@@ -137,6 +187,31 @@ See https://the-ai-alliance.github.io/open-trusted-data-initiative/ for an examp
   font: 0.75rem;
 }
 
+.toggle-btn {
+  @extend .keyword-btn;
+  @extend .btn-primary;
+  text-align: left;
+  margin: 5px;  
+}
+
+.letter-btn {
+  @extend .keyword-btn;
+  @extend .btn-green;
+  text-align: left;
+  margin-top: 5px;  
+  margin-bottom: 5px;  
+  width: 3rem;
+}
+
+.go-to-btn {
+  @extend .keyword-btn;
+  @extend .btn-green;
+  text-align: left;
+  margin-top: 5px;  
+  margin-bottom: 5px;  
+  width: 3rem;
+}
+
 .category-btn {
   @extend .keyword-btn;
   @extend .btn-green;
@@ -153,6 +228,33 @@ h3.topic-btn {
 }
 h3.topic {
   @extend .btn-blue;
+}
+
+#letter-navigation {
+  margin-bottom: 15px;    
+}
+
+.right {
+  position: fixed;
+  right: 50px; 
+}
+
+.bottom-left {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+}
+
+.bottom-right {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+
+.stay-on-top {
+  position: fixed;
+  top: 0px;
+  right: 0px;
 }
 
 
@@ -197,3 +299,6 @@ h3.topic {
   max-width: fit-content;
 }
 
+.toggle-button-div {
+  margin-bottom: 1rem !important;
+}
