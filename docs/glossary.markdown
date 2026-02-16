@@ -13,32 +13,17 @@ has_children: false
 		// Posted by dakab
 		// Retrieved 2026-02-16, License - CC BY-SA 3.0
 
-		And this hack was used to compose the tags with JavaScript:
-		// Source - https://stackoverflow.com/a/18982299
-		// Posted by T.J. Crowder, modified by community. See post 'Timeline' for change history
-		// Retrieved 2026-02-16, License - CC BY-SA 4.0
-
-		What we want:
+		Actually, the more proper way is to use these tags, but my attempts
+		to make this work failed!
 		<meta http-equiv="refresh" content="0; url=.../#hash">
 		<link rel="canonical" href=".../#hash" />
 		{% endcomment %}
 
 		<script type="text/javascript">
 			newURL = "{{site.baseurl}}/" + document.location.search + document.location.hash;
-			console.log(newURL);
-
-			var meta = document.createElement('meta');
-			meta.httpEquiv = "refresh";
-			meta.content = "0";
-			meta.url = newURL;
-			document.getElementsByTagName('head')[0].appendChild(meta);
-			console.log(meta);
-			var link = document.createElement('link');
-			link.rel = "canonical";
-			link.href = newURL;
-			document.getElementsByTagName('head')[0].appendChild(link);
-			console.log(link);
+			document.location.href = newURL;
 		</script>
 	</head>
-	<body></body>
+	<body>
+	</body>
 </html>
