@@ -553,6 +553,10 @@ terms:
     description: 
       Taking into account the environmental impact of [AI systems](#ai-system), such as carbon footprint and water usage for cooling, both now and for the future [\[2\]](#nist).
 
+  - name: Synthetic Data Generation
+    description: 
+      An important technique for creating data sets for evaluation, training, tuning, and other purposes when _real_ data sets for the same purpose don't exist or are not usable due to legal or other restrictions. Many techniques exist for this purpose. One challenge is to ensure the synthetic data meets quality and relevance requirements.
+
   - name: System Prompt
     description: 
       A commonly-used, statically-coded part of the [Context](#context) information added by an [AI System](#ai-system) the [Prompt](#prompt) before sending it to the [LLM](#large-language-model). System prompts are typically used to provide the model with overall guidance about the application's purpose and how the LLM should respond. For example, it might include phrases like &ldquo;You are a helpful software development assistant.&rdquo;
