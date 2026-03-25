@@ -247,13 +247,6 @@ terms:
 
       Contrast with [Object-Oriented Programming](#object-oriented-programming). Many programming languages combine aspects of FP and OOP.
 
-  - name: Guardrails
-    description: 
-      A frequently-used term for inference-time use of [Evaluations](#evaluation) to detect and mitigate usage of the [AI System](#ai-system) that is considered unsafe or otherwise outside the terms of use.
-
-
-      Guardrails often focus on user [Prompts](#prompt) and [Responses](#response), looking for undesirable content, such as hate speech, misinformation, hallucinations, hacking attempts, etc.
-
   - name: Generative Adversarial Networks
     description: 
       A GAN uses two neural networks that compete with each other in a &ldquo;zero-sum&rdquo; game, where one agent's gain is another agent's loss.
@@ -283,6 +276,17 @@ terms:
   - name: Governance
     description: 
       End-to-end control of assets, especially [Data Sets](#Data Set) and [Models](#model), with lineage traceability and access controls for protecting the security and integrity of assets.
+
+  - name: Grader
+    description: 
+      A tool used by an evaluation to check a result. See the notes in [The Challenges of Writing Agent Evaluations](https://the-ai-alliance.github.io/ai-application-testing/testing-strategies/testing-agents/#the-challenges-of-writing-agent-evaluations){:target="aiat"}, which summarizes [this Anthropic post](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents){:target="anthropic-evals"} on agent evaluations.
+
+  - name: Guardrails
+    description: 
+      A frequently-used term for inference-time use of [Evaluations](#evaluation) to detect and mitigate usage of the [AI System](#ai-system) that is considered unsafe or otherwise outside the terms of use.
+
+
+      Guardrails often focus on user [Prompts](#prompt) and [Responses](#response), looking for undesirable content, such as hate speech, misinformation, hallucinations, hacking attempts, etc.
 
   - name: Hallucination
     description: 
@@ -555,7 +559,7 @@ terms:
 
   - name: Synthetic Data Generation
     description: 
-      An important technique for creating data sets for evaluation, training, tuning, and other purposes when _real_ data sets for the same purpose don't exist or are not usable due to legal or other restrictions. Many techniques exist for this purpose. One challenge is to ensure the synthetic data meets quality and relevance requirements.
+      An important technique for creating data sets for evaluation, training, tuning, and other purposes when _real_ data sets for the same purpose don't exist or are not usable due to legal or other restrictions. Many techniques exist for synthesizing data. One challenge is to ensure the synthetic data meets quality and relevance requirements.
 
   - name: System Prompt
     description: 
