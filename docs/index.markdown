@@ -36,6 +36,10 @@ terms:
 
       Agents may be designed to perform actions automatically for the user, although the risk associated with this autonomy needs to be carefully designed and tested, depending on the severity of potential unintended consequences. Often, agents are designed to recommend actions the user should take or at least request user confirmation before taking actions. 
 
+  - name: Agent Skills
+    description: 
+      An emerging concept for a structured way of specifing new skills for an [Agent](#agent) and how to teach an agent to use them. As defined on the [agentskills.io](https://agentskills.io/what-are-skills){:target="agent-skills"} website, &ldquo;Agent Skills are a lightweight, open format for extending AI agent capabilities with specialized knowledge and workflows.&rdquo; See the discussion in [Testing Generative AI Agent Applications](https://the-ai-alliance.github.io/ai-application-testing/testing-strategies/testing-agents/#agent-skills){:target="tgaiaa"} for more details.
+
   - name: Agentic Engineering
     description: 
       A term coined by [Andrej Karpathy](https://x.com/karpathy/status/2019137879310836075){:target="kpx"} to represent a more careful engineering approach to AI-driven software development than [Vibe Coding](#vibe-coding), the term he coined for more &ldquo;one-off&rdquo; use of AI for generation of proofs of concepts, etc., but not suitable for developing applications that need long-term evolution and maintenance. 
@@ -611,7 +615,7 @@ terms:
       In our context, training is the processes used to teach a model, such as a [Generative AI Models](#generative-ai-model) how to do its intended job. A more precise term used in generative AI model development is [Pre-Training](#pre-training), the training process that uses a massive data corpus to teach the model facts about the world, how to speak and understand human language, and do some skills. However, the resulting model uses does poorly on specialized tasks and even basic skills like following a user's instructions, conforming to social norms (e.g., avoiding hate speech), etc. 
 
 
-      That's where a second [Tuning](#tuning) phase comes in, often called [Post-Training](#post-training), which uses a suite of processes to improve the models performance on many general or specific skills.
+      That's where a second [Tuning](#tuning) phase comes in, often called [Post-Training](#post-training), which uses a suite of processes to improve the models performance on many general or specific skills. See also [Agent Skills](#agent-skills).
 
   - name: Trust and Safety
     description: 
