@@ -166,6 +166,10 @@ terms:
     description: 
       Sometimes written _dataset_, a collection of data items used for training, evaluation, etc. Usually, a given data set has a schema (which may simply be &ldquo;unstructured text&rdquo;) and some metadata that may include information about provenance, license for use (which may specify disallowed uses), target uses, transformations and filters applied, etc. [\[1\]](#mlc).
 
+  - name: Deep Research Agent
+    description: 
+      A powerful and flexible kind [Agent](#agent) that is designed to research a topic using web search and targeted document search, then synthesize the results into a report or other useful artifacts. The pattern is very general. Instantiations of it usually configure data sources and system prompts to tailor the research towards domain-relevant sources and artifact generation. See, for example, the AI Alliance project [Deep Research Agent for Applications](https://the-ai-alliance.github.io/deep-research-agent-for-applications/){:target="_blank"}
+
   - name: Design By Contract
     description: 
       The idea of [Design By Contract](https://en.wikipedia.org/wiki/Design_by_contract){:target="_wikipedia"} (&ldquo;DbC&rdquo;) was developed by [Bertrand Meyer](https://en.wikipedia.org/wiki/Bertrand_Meyer){:target="_wikipedia"} and incorporated into his [Eiffel](https://en.wikipedia.org/wiki/Eiffel_(programming_language)){:target="_wikipedia"} programming language. In Eiffel all functions can define a _contract_ for allowed inputs, invariants, and guaranteed responses, if the input requirements are met. The runtime system would handle any failures of these contracts. A _core principle_ of DbC use is that contract failures should terminate the application immediately, forcing the developers to fix the issue. Failure to do so becomes an excuse to let bugs accumulate. If this principle was rigorously followed during development, it is often considered acceptable (or at least &ldquo;expedient&rdquo;), to log contract failures, but not terminate execution in production runs. DbC can be used in other languages through built-in features (like _assertions_), libraries, or various runtime features.
