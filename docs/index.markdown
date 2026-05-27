@@ -65,7 +65,7 @@ terms:
 
   - name: Alignment
     description: 
-      A general term for how well an [AI System's](#ai-system) outputs (e.g., replies to queries) and [Behaviors](#behavior) correspond to end-user and service provider objectives, including the quality and utility of results, as well as safety requirements. Quality implies factual correctness and utility implies the results are fit for purpose, e.g., a Q&A system should answer user questions concisely and directly, a Python code-generation system should output valid, bug-free, and secure Python code. [EleutherAI](https://www.eleuther.ai/){:target="eleuther"} defines alignment [this way](https://www.eleuther.ai/alignment){:target="eleuther"}, &ldquo;Ensuring that an artificial intelligence system behaves in a manner that is consistent with human values and goals.&rdquo; See also the work of the [Alignment Forum](https://www.alignmentforum.org/){:target="alignment-forum"}.
+      A general term for how well an [AI System's](#ai-system) outputs (e.g., replies to queries) and [Behaviors](#behavior) correspond to end-user and service provider objectives, including the quality and utility of results, as well as safety requirements. Also used as a verb for the processes that achieve these goals. Quality implies factual correctness and utility implies the results are fit for purpose, e.g., a Q&A system should answer user questions concisely and directly, a Python code-generation system should output valid, bug-free, and secure Python code. [EleutherAI](https://www.eleuther.ai/){:target="eleuther"} defines alignment [this way](https://www.eleuther.ai/alignment){:target="eleuther"}, &ldquo;Ensuring that an artificial intelligence system behaves in a manner that is consistent with human values and goals.&rdquo; See also the work of the [Alignment Forum](https://www.alignmentforum.org/){:target="alignment-forum"}. See also [Reinforcement Learning](#reinforcement-learning) and [Fine tuning](#fine-tuning).
 
   - name: Annotation
     description: 
@@ -146,6 +146,12 @@ terms:
     description: 
       When work can be partitioned into smaller steps that can be executed in any order and the runtime executes them in a nonpredictable order. If the order is predictable, no matter how it executed, we can say it is effectively [Sequential](#sequential).
 
+  - name: Constitutional AI
+    description: 
+      Introduced by Anthropic. Can be used for [Alignment](#alignment) as an alternative to tools like [Direct Preference Optimization](#direct-preference-optimization) (DPO) and [Reinforcement Learning with Human Feedback](#reinforcement-learning-with-human-feedback) (RLHF).
+
+      More details TODO.
+
   - name: Context
     description: 
       Additional information passed to an [LLM](#large-language-model) as part of a user [Prompt](#prompt), which is intended to provide additional, useful _context_ information so that the [Response](#response) is better than if the user's prompt was passed to the LLM alone. This additional content may include a [System Prompt](#system-prompt), relevant documents retrieved using [RAG](#retrieval-augmented-generation), etc.
@@ -189,7 +195,7 @@ terms:
       TODO.
 
 
-      See also [Reinforcement Learning](#reinforcement-learning).
+      See also [Reinforcement Learning](#reinforcement-learning) and [Alignment](#alignment).
 
   - name: Explainability
     description: 
@@ -233,7 +239,7 @@ terms:
 
   - name: Fine Tuning
     description: 
-      A more specific term for [Tuning](#tuning), a part of [Post-Training](#post-training), that emphasizes that after the major learning has happened during [Pre-Training](#pre-training), the model behavior is refined and improved with additional training techniques. See also [Supervised Fine Tuning](#supervised-fine-tuning).
+      A more specific term for [Tuning](#tuning), a part of [Post-Training](#post-training), that emphasizes that after the major learning has happened during [Pre-Training](#pre-training), the model behavior is refined and improved with additional training techniques. This step is often used to improve general skills, like instruction following. See also [Supervised Fine Tuning](#supervised-fine-tuning) and [Instruction Fine Tuning](#instruction-fine-tuning).
 
   - name: Function
     description: 
@@ -465,7 +471,7 @@ terms:
       Variations include having a dedicated _reward model_ that calculates the reward based on the chosen action. When RL is used for a game, for example, it might be obvious what the reward is for any action and state combination, i.e., did you land on square that reveals a &ldquo;boost&rdquo; of some kind. In contrast, reward determination like deciding if an LLM output is a good [Response](#response) to a [Prompt](#prompt), etc. is not so simple. 
 
 
-      In the generative AI context, RL is a popular tool in the suite of model [Tuning](#tuning) processes that are used to improve model performance in various ways. In particular, [Reinforcement Learning with Human Feedback](#reinforcement-learning-with-human-feedback) (RLHF) is a popular technique for [Adaptation](#adaptation). A new technique called [Direct Preference Optimization](#direct-preference-optimization) (DPO) has largely replaced RL in many applications.
+      In the generative AI context, RL is a popular tool in the suite of model [Tuning](#tuning) processes that are used to improve model performance in various ways. In particular, [Reinforcement Learning with Human Feedback](#reinforcement-learning-with-human-feedback) (RLHF) is a popular technique for [Adaptation](#adaptation) and [Alignment](#alignment). A new technique called [Direct Preference Optimization](#direct-preference-optimization) (DPO) has largely replaced RL in many applications.
 
 
       See also the discussion of [Reinforcement Fine Tuning]({{site.baseurl}}/advanced-techniques/from-testing-to-tuning/#reinforcement-fine-tuning) in [From Testing to Tuning]({{site.baseurl}}/advanced-techniques/from-testing-to-tuning/), which describes RL in more detail. 
@@ -559,7 +565,7 @@ terms:
 
   - name: Supervised Fine Tuning
     description: 
-      Often abbreviated _SFT_. A more general term than [Instruction Fine Tuning](#instruction-fine-tuning), but often used synonymously. _Supervised_ is an old term in machine learning for any kind of training algorithm that uses [Labeled Data](#labeled-data), i.e., data that includes the expected answers. See also [Tuning](#tuning).
+      Often abbreviated _SFT_. A more general term than [Instruction Fine Tuning](#instruction-fine-tuning), but often used synonymously. _Supervised_ is an old term in machine learning for any kind of training algorithm that uses [Labeled Data](#labeled-data), i.e., data that includes the expected answers. See also [Tuning](#tuning) and [Fine Tuning](#fine-tuning).
 
   - name: Sustainability
     description: 
@@ -627,7 +633,7 @@ terms:
 
   - name: Tuning
     description: 
-      Tuning, or [Post-Training](#post-training), refers to one or more processes used to transform a [Pre-Trained](#pre-training) model into one that exhibits much better desired [Behaviors](#behavior) (like instruction following) or specialized domain knowledge. The term [Fine Tuning](#fine-tuning) (sometimes spelled _finetuning_) is also widely used. These days, [Instruction Fine Tuning](#instruction-fine-tuning) is a very common form of tuning, which uses [Supervised Fine Tuning](#supervised-fine-tuning). Another suite of techniques used is [Reinforcement Learning](#reinforcement-learning).
+      Tuning, or [Post-Training](#post-training), refers to one or more processes used to transform a [Pre-Trained](#pre-training) model into one that exhibits much better desired [Behaviors](#behavior) (like instruction following) or specialized domain knowledge. The term [Fine Tuning](#fine-tuning) (sometimes spelled _finetuning_) is also widely used. These days, [Instruction Fine Tuning](#instruction-fine-tuning) is a very common form of tuning, which uses [Supervised Fine Tuning](#supervised-fine-tuning). Another suite of techniques used is [Reinforcement Learning](#reinforcement-learning) for [Alignment](#alignment).
 
   - name: Unit
     description: 
