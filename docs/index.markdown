@@ -189,10 +189,10 @@ terms:
 
   - name: Determinism
     description: 
-      The output of a [Component](#component) for a given input is always known precisely. This affords writing repeatable, predictable software and automated, reliable tests.
+      The output of a [Component](#component) for a given input is always known precisely. This affords writing [Repeatable](#Repeatable), [Predictability](#predictable) software and automated, reliable tests.
 
 
-      In contrast, _nondeterminism_ means identical inputs yield different results, removing [Repeatability](#Repeatable) and complicating [Predictability](#predictable), and the ability to write automated, reliable tests.
+      In contrast, _nondeterminism_ means identical inputs yield different results, removing repeatability and complicating predictability, and the ability to write automated, reliable tests.
 
   - name: Direct Preference Optimization
     description: 
