@@ -147,10 +147,14 @@ terms:
       When work can be partitioned into smaller steps that can be executed in any order and the runtime executes them in a nonpredictable order. If the order is predictable, no matter how it executed, we can say it is effectively [Sequential](#sequential).
 
   - name: Constitutional AI
-    description: 
-      Introduced by Anthropic. Can be used for [Alignment](#alignment) as an alternative to tools like [Direct Preference Optimization](#direct-preference-optimization) (DPO) and [Reinforcement Learning with Human Feedback](#reinforcement-learning-with-human-feedback) (RLHF).
+    description:
+      Constitutional AI ([website](https://constitutional.ai/){:target="cai"}) was introduced by Anthropic in this paper, [Constitutional AI&#58; Harmlessness from AI Feedback.](https://arxiv.org/abs/2212.08073){:target="arxiv"}. As explained by Claude AI itself on July 7, 2023&#58;
 
-      More details TODO.
+
+      &ldquo;Constitutional AI refers to a set of techniques developed by researchers at Anthropic to align AI systems like myself with human values and make us helpful, harmless, and honest. The key ideas behind Constitutional AI are aligning an AI's behavior with a 'constitution' defined by human principles, using techniques like self-supervision and adversarial training, developing constrained optimization techniques, and designing training data and model architecture to encode beneficial behaviors.&rdquo; 
+
+
+      It can be used for [Alignment](#alignment) as an alternative or complement to tools like [Direct Preference Optimization](#direct-preference-optimization) (DPO) and [Reinforcement Learning with Human Feedback](#reinforcement-learning-with-human-feedback) (RLHF). The [Constitution AI Project](https://constitutionai.org/){:target="cai-org"} is a separate initiative, but with similar aims.
 
   - name: Context
     description: 

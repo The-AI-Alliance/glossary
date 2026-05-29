@@ -87,13 +87,25 @@ blockquote {
 
 .term-display {
   a {
-    color: #694b68; /* #592b48; #34192a; #342f16; #26517f; */
+    color: #694b68;
+    /*
+    color: #592b48;
+    color: #342f16;
+    color: #34192a;
+    color: #26517f;
+    */
     text-decoration: underline; 
-    text-decoration-style: dotted;
-    /* font-weight: bold; */
+    text-decoration-style: solid;
+    font-weight: bold; 
   }
   a:hover {
-    background: #FFFFFF; /* #96b2b9; #D3BF59; */
+    background: #C0FFA0;
+    /*
+    background: #FFFFFF;
+    background: #FFF0A0;
+    background: #D3BF59;
+    background: #96b2b9;
+    */
     /* color: #534b23; /* #112337; */
   }
 
