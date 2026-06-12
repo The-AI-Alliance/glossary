@@ -9,7 +9,7 @@ terms:
       The analog of [Acceptance Tests](#acceptance-test) for an AI-enabled system that has [Stochastic](#stochastic) behaviors. [Benchmark](#benchmark) technology is adapted for the purpose.
 
 
-      See also [Unit Test](#unit-test), [Unit Benchmark](#unit-Benchmark), [Integration Test](#integration-test), [Integration Benchmark](#integration-Benchmark), and [Acceptance Test](#acceptance-test).
+      See also [Unit Test](#unit-test), [Unit Benchmark](#unit-Benchmark), [Integration Test](#integration-test), [Integration Benchmark](#integration-Benchmark), [Acceptance Test](#acceptance-test), and [Evaluation Card](#evaluation-card).
 
   - name: Acceptance Test
     description: 
@@ -19,7 +19,7 @@ terms:
       However, it is desirable to make them automated, in which case all operations with [Side Effects](#side-effects) need to be replaced with [Deterministic](#determinism) [Test Doubles](#test-double).
 
       
-      See also [Test](#test), [Unit Test](#unit-test), [Unit Benchmark](#unit-benchmark), [Integration Test](#integration-test), [Integration Benchmark](#integration-benchmark), and [Acceptance Benchmark](#acceptance-benchmark).
+      See also [Test](#test), [Unit Test](#unit-test), [Unit Benchmark](#unit-benchmark), [Integration Test](#integration-test), [Integration Benchmark](#integration-benchmark), [Acceptance Benchmark](#acceptance-benchmark).
 
   - name: Accountability
     description: 
@@ -65,7 +65,9 @@ terms:
 
   - name: Alignment
     description: 
-      A general term for how well an [AI System's](#ai-system) outputs (e.g., replies to queries) and [Behaviors](#behavior) correspond to end-user and service provider objectives, including the quality and utility of results, as well as safety requirements. Also used as a verb for the processes that achieve these goals. Quality implies factual correctness and utility implies the results are fit for purpose, e.g., a Q&A system should answer user questions concisely and directly, a Python code-generation system should output valid, bug-free, and secure Python code. [EleutherAI](https://www.eleuther.ai/){:target="eleuther"} defines alignment [this way](https://www.eleuther.ai/alignment){:target="eleuther"}, &ldquo;Ensuring that an artificial intelligence system behaves in a manner that is consistent with human values and goals.&rdquo; See also the work of the [Alignment Forum](https://www.alignmentforum.org/){:target="alignment-forum"}. See also [Reinforcement Learning](#reinforcement-learning) and [Fine tuning](#fine-tuning).
+      A general term for how well an [AI System's](#ai-system) outputs (e.g., replies to queries) and [Behaviors](#behavior) correspond to end-user and service provider objectives, including the quality and utility of results, as well as safety requirements. Also used as a verb for the processes that achieve these goals. Quality implies factual correctness and utility implies the results are fit for purpose, e.g., a Q&A system should answer user questions concisely and directly, a Python code-generation system should output valid, bug-free, and secure Python code. [EleutherAI](https://www.eleuther.ai/){:target="eleuther"} defines alignment [this way](https://www.eleuther.ai/alignment){:target="eleuther"}, &ldquo;Ensuring that an artificial intelligence system behaves in a manner that is consistent with human values and goals.&rdquo; See also the work of the [Alignment Forum](https://www.alignmentforum.org/){:target="alignment-forum"}. 
+
+      See also [Benchmark](#benchmark), [Evaluation](#evaluation), [Reinforcement Learning](#reinforcement-learning) and [Fine tuning](#fine-tuning).
 
   - name: Annotation
     description: 
@@ -84,7 +86,10 @@ terms:
       Behavior-Driven Development (BDD) is an evolution of [TDD](#test-driven-development) where the testing APIs more explicitly express the language of specifying behaviors. Hence, writing tests in a BDD style means creating _executable specifications_. 
 
 
-      Popular examples include [RSpec](https://rspec.info/){:target="_blank"} for the Ruby language community and several BDD-inspired dialects supported by [ScalaTest](https://www.scalatest.org/user_guide/selecting_a_style){:target="_blank"} for Scala. While useful for thinking through requirements, there was a tendency for these APIs to be verbose to use, so practitioners often combined these APIs with more concise testing APIs. See also [Test-Driven Development](#test-driven-development), [Specification-Driven Development](#specification-driven-development), [Property-Based testing](#property-based-testing), and [Design by Contract](#design-by-contract).
+      Popular examples include [RSpec](https://rspec.info/){:target="_blank"} for the Ruby language community and several BDD-inspired dialects supported by [ScalaTest](https://www.scalatest.org/user_guide/selecting_a_style){:target="_blank"} for Scala. While useful for thinking through requirements, there was a tendency for these APIs to be verbose to use, so practitioners often combined these APIs with more concise testing APIs. 
+
+
+      See also [Test-Driven Development](#test-driven-development), [Specification-Driven Development](#specification-driven-development), [Property-Based testing](#property-based-testing), and [Design by Contract](#design-by-contract).
 
   - name: Benchmark
     description: 
@@ -96,7 +101,7 @@ terms:
       1. A summarization of the results.
 
 
-      See also [Unit Benchmark](#unit-benchmark), [Integration Benchmark](#integration-benchmark), and [Acceptance Benchmark](#acceptance-benchmark).
+      See also [Unit Benchmark](#unit-benchmark), [Integration Benchmark](#integration-benchmark), [Acceptance Benchmark](#acceptance-benchmark), [Evaluation](#evaluation), and [Evaluation Card](#evaluation-card).
 
   - name: ChatBot
     description: 
@@ -174,7 +179,21 @@ terms:
 
   - name: Data Set
     description: 
-      Sometimes written _dataset_, a collection of data items used for training, evaluation, etc. Usually, a given data set has a schema (which may simply be &ldquo;unstructured text&rdquo;) and some metadata that may include information about provenance, license for use (which may specify disallowed uses), target uses, transformations and filters applied, etc. [\[1\]](#mlc).
+      Sometimes written _dataset_, a collection of data items used for training, evaluation, etc. Usually, a given data set has a schema (which may simply be &ldquo;unstructured text&rdquo;) and some metadata in the form of a [Data Set Card](#data-set-card) that typically includes information about provenance, license for use (which may specify disallowed uses), target uses, transformations and filters applied, etc. [\[1\]](#mlc).  (We use &ldquo;data set&rdquo; in this website, but &ldquo;dataset&rdquo; is a common spelling, including at [Hugging Face](https://huggingface.co/){:target="hf"}.) 
+
+  - name: Croissant
+    description:
+      [Croissant](https://github.com/mlcommons/croissant){:target="croissant"} is a format (schema) for defining the metadata for [Data Sets](#data-set). It is a widely-used, de facto standard for dataset metadata.
+
+
+      See also [Data Set Card](#data-set-card).
+
+  - name: Data Set Card
+    description:
+      A description of a [Data Set](#data-set) in a standardized format (schema), which makes machine processing easier and provides examples for creators of cards for new data sets. There isn't an official standard format at this time, although [Croissant](#croissant) is widely used, including support by [Hugging Face](https://huggingface.co/){:target="hf"}. Hugging Face's own [Data Set Card](https://huggingface.co/docs/hub/datasets-cards){:target="hf-dc"} format, which predates Croissant, is a de facto standard.
+
+
+      See also [Croissant](#croissant), [Evaluation Card](#evaluation-card), and [Model Card](#model-card).
 
   - name: Deep Research Agent
     description: 
@@ -219,7 +238,15 @@ terms:
       An evaluation may be implemented in one of several ways. A [Classifier](#classifier) [LLM](#large-language-model) or another kind of model might be used to label content. In general, evaluations often include a [Data Set](#data-set) of examples used to [Train](#training) a model for purposes like classification, or the data set can be used to query a model and score the quality of the responses. For our purposes, an implementation of an evaluation is API compatible for execution within an [Evaluation Framework](#evaluation-framework). 
 
 
-      See also [Evaluation Framework](#evaluation-framework).
+      See also [Evaluation Framework](#evaluation-framework), [Data Set Card](#data-set-card), [Evaluation Card](#evaluation-card), and [Model Card](#model-card).
+
+  - name: Evaluation Card
+    description:
+
+      A description of an [Evaluation](#evaluation) in a standardized format (schema), which makes machine processing easier and provides examples for creators of cards for new evaluations and instances of running them against particular models. There isn't an official standard format at this time, but the [EvalEval Coalition](https://evalevalai.com/){:target="evaleval"} is defining a standard schema for evaluation cards, and it has started a [catalog](https://evalcards.evalevalai.com/){:target="evaleval-catalog"} of cards. For information about EvalEval, see the description in the [AI Trust and Safety User Guide](https://the-ai-alliance.github.io/trust-safety-user-guide/references/#evaleval-coalition){:target="tsug"}.
+
+
+      See also [Data Set Card](#data-set-card) and [Model Card](#model-card).
 
   - name: Evaluation Framework
     description: 
@@ -235,7 +262,10 @@ terms:
 
   - name: Feature
     description: 
-      For our purposes, a small bit of functionality provided by a [Component](#component) and the [AI Systems](#ai-systems) that use it. A feature is the increment of change in a single cycle of the [Test-Driven Development](#test-driven-development) process, which could be enhancing some user-visible functionality or adding wholly-new new functionality in small increments. See also [Use Case](#use-case).
+      For our purposes, a small bit of functionality provided by a [Component](#component) and the [AI Systems](#ai-systems) that use it. A feature is the increment of change in a single cycle of the [Test-Driven Development](#test-driven-development) process, which could be enhancing some user-visible functionality or adding wholly-new new functionality in small increments. 
+
+
+      See also [Use Case](#use-case).
 
   - name: Few-Shot Prompt
     description: 
@@ -243,7 +273,10 @@ terms:
 
   - name: Fine Tuning
     description: 
-      A more specific term for [Tuning](#tuning), a part of [Post-Training](#post-training), that emphasizes that after the major learning has happened during [Pre-Training](#pre-training), the model behavior is refined and improved with additional training techniques. This step is often used to improve general skills, like instruction following. See also [Supervised Fine Tuning](#supervised-fine-tuning) and [Instruction Fine Tuning](#instruction-fine-tuning).
+      A more specific term for [Tuning](#tuning), a part of [Post-Training](#post-training), that emphasizes that after the major learning has happened during [Pre-Training](#pre-training), the model behavior is refined and improved with additional training techniques. This step is often used to improve general skills, like instruction following.
+
+
+      See also [Supervised Fine Tuning](#supervised-fine-tuning) and [Instruction Fine Tuning](#instruction-fine-tuning).
 
   - name: Function
     description: 
@@ -316,7 +349,10 @@ terms:
 
   - name: Immutable
     description: 
-      A [Unit's](#unit) or [Component's](#component) [State](#state) cannot be modified, once it has been initialized. If _all_ units in a [Component](#component) are immutable, then the component itself is considered immutable. Contrast with [Mutable](#mutable). See also [State](#state).
+      A [Unit's](#unit) or [Component's](#component) [State](#state) cannot be modified, once it has been initialized. If _all_ units in a [Component](#component) are immutable, then the component itself is considered immutable. Contrast with [Mutable](#mutable). 
+
+
+      See also [State](#state).
 
   - name: Inference
     description: 
@@ -324,7 +360,10 @@ terms:
 
   - name: Instruction Fine Tuning
     description: 
-      Often abbreviated _IFT_ and sometimes shortened to _Instruction Tuning_. A form of [Supervised Fine Tuning](#supervised-fine-tuning) that uses a [Labeled Data](#labeled-data) set of instruction [Prompts](#prompt) and [Responses](#response). It is designed to improve model performance for specific tasks and for following instructions, in general, such as [Question Answering](#question-answering). See also [Tuning](#tuning).
+      Often abbreviated _IFT_ and sometimes shortened to _Instruction Tuning_. A form of [Supervised Fine Tuning](#supervised-fine-tuning) that uses a [Labeled Data](#labeled-data) set of instruction [Prompts](#prompt) and [Responses](#response). It is designed to improve model performance for specific tasks and for following instructions, in general, such as [Question Answering](#question-answering). 
+
+
+      See also [Tuning](#tuning).
 
   - name: Integration Benchmark
     description: 
@@ -342,7 +381,7 @@ terms:
 
   - name: Labeled Data
     description: 
-      Labeled data contains content used to train a model and corresponding _labels_ of expected outcomes. A classic example is a labeled data set for [Training](#training) a SPAM filter, where example emails are labeled SPAM or not SPAM. In contrast, [Unlabeled Data](#unlabeled-data) contains no such labels. Labeled data is used in model [Tuning](#tuning), while sets of unlabeled data are used for training raw [Generative AI Models](#generative-ai-models). 
+      A labeled [Data Set](#data-set) contains data and corresponding _labels_ of expected outcomes that is used to train a model to produce similar outcomes when given similar data. A classic example is a labeled data set for [Training](#training) a SPAM filter, where example emails are labeled SPAM or not SPAM. In contrast, [Unlabeled Data](#unlabeled-data) contains no such labels. In the [Generative AI](#generative-aI) context, labeled data is most often used in model [Tuning](#tuning), while unlabeled data sets are used for training raw [Generative AI Models](#generative-ai-models). 
 
 
       In the context of [Generative AI Models](#generative-ai-models), there are several popular formats for labeled data&#58;
@@ -354,11 +393,26 @@ terms:
 
   - name: Large Language Model
     description: 
-      Abbreviated _LLM_, a state of the art [Generative AI Model](#generative-ai-model), often with billions of parameters, that has the ability to summarize, classify, and even generate text in one or more spoken and programming languages. See also [Model](#model) and [Multimodal Model](#multimodal-model).
+      Abbreviated _LLM_, a state of the art [Generative AI Model](#generative-ai-model), often with billions of parameters, that has the ability to summarize, classify, and even generate text in one or more spoken and programming languages. 
+
+
+      See also [Model](#model) and [Multimodal Model](#multimodal-model).
 
   - name: Model
     description: 
-      A combination of data and code, usually trained on a [Data Set](#Data Set), to support [Inference](#inference) of some kind. See also [Generative AI Model](#generative-ai-model), [Large Language Model](#large-language-model), and [Multimodal Model](#multimodal-model).
+      A combination of data and code, usually trained on a [Data Set](#Data Set), to support [Inference](#inference) of some kind. 
+
+
+      See also [Generative AI Model](#generative-ai-model), [Large Language Model](#large-language-model), and [Multimodal Model](#multimodal-model).
+
+
+  - name: Model Card
+    description:
+
+      A description of a [Model](#model) in a standardized format (schema), which makes machine processing easier and provides examples for creators of cards for new models. There isn't an official standard format at this time, but the [Hugging Face model cards](https://huggingface.co/docs/hub/model-cards){:target="hf-mc"} are a de facto standard.
+
+
+      See also [Data Set Card](#data-set-card) and [Evaluation Card](#evaluation-card).
 
   - name: Model Context Protocol
     description: 
@@ -366,11 +420,17 @@ terms:
 
   - name: Multimodal Model
     description: 
-      A model that extends the text-based capabilities of [LLMs](#large-language-model) with additional support for other media, such as video, audio, still images, or other kinds of data. See also [Model](#model).
+      A model that extends the text-based capabilities of [LLMs](#large-language-model) with additional support for other media, such as video, audio, still images, or other kinds of data. 
+
+
+      See also [Model](#model).
 
   - name: Mutable
     description: 
-      A [Unit's](#unit) [State](#state) can be modified during execution, either through direct manipulation by another unit or indirectly by invoking the unit (e.g., calling a [Function](#function) that changes the state. If any _one_ unit in a [Component](#component) is mutable, then the component itself is considered mutable. Contrast with [Immutable](#immutable). See also [State](#state).
+      A [Unit's](#unit) [State](#state) can be modified during execution, either through direct manipulation by another unit or indirectly by invoking the unit (e.g., calling a [Function](#function) that changes the state. If any _one_ unit in a [Component](#component) is mutable, then the component itself is considered mutable. Contrast with [Immutable](#immutable). 
+
+
+      See also [State](#state).
 
   - name: Object-Oriented Programming
     description: 
@@ -395,7 +455,10 @@ terms:
 
   - name: Predictable
     description: 
-      In the context of software, the quality that knowing a [Unit's](#unit) or [Component's](#component) history of past [Behavior](#behavior) and its design, you can predict its future behavior reliably. See also [State Machine](#state-machine).
+      In the context of software, the quality that knowing a [Unit's](#unit) or [Component's](#component) history of past [Behavior](#behavior) and its design, you can predict its future behavior reliably. 
+
+
+      See also [State Machine](#state-machine).
 
   - name: Pre-Training
     description: 
@@ -421,15 +484,24 @@ terms:
 
   - name: Prompt
     description: 
-      The query a user (or another system) sends to an [LLM](#large-language-model). Often, additional [Context](#context) information is added by an [AI System](#ai-system) before sending the prompt to the LLM. See also [Prompt Engineering](#prompt-engineering), [Prompt Injection](#prompt-injection), [Few-Shot Prompt](#few-shot-prompt), and [Zero-Shot Prompt](#zero-shot-prompt).
+      The query a user (or another system) sends to an [LLM](#large-language-model). Often, additional [Context](#context) information is added by an [AI System](#ai-system) before sending the prompt to the LLM. 
+
+
+      See also [Prompt Engineering](#prompt-engineering), [Prompt Injection](#prompt-injection), [Few-Shot Prompt](#few-shot-prompt), and [Zero-Shot Prompt](#zero-shot-prompt).
 
   - name: Prompt Engineering
     description: 
-      A term for the careful construction of good [Prompts](#prompt) to maximize the quality of [Inference](#inference) [Responses](#response). It is really considered more _art_ than _science_ or _engineering_ because of the subjective relationship between prompts and responses for [Generative AI Models](#generative-ai-model). See also [Prompt Injection](#prompt-injection).
+      A term for the careful construction of good [Prompts](#prompt) to maximize the quality of [Inference](#inference) [Responses](#response). It is really considered more _art_ than _science_ or _engineering_ because of the subjective relationship between prompts and responses for [Generative AI Models](#generative-ai-model). 
+
+
+      See also [Prompt Injection](#prompt-injection), [Agentic Engineering](#agentic-engineering), [Vibe Coding](#vibe-coding), and [Vibe Engineering](#vibe-engineering).
 
   - name: Prompt Injection
     description: 
       A term for inserting content into [Prompts](#prompt) that triggers undesirable behaviors. This is a new [Cybersecurity](#cybersecurity) threat introduced by [AI Systems](#ai-systems), [Generative AI Models](#generative-ai-models), in particular.
+
+
+      See also [Prompt Engineering](#prompt-engineering).
 
   - name: Property-Based Testing
     description: 
@@ -465,7 +537,7 @@ terms:
 
   - name: Reinforcement Fine Tuning
     description: 
-      See the discussion of [Reinforcement Fine Tuning]({{site.baseurl}}/advanced-techniques/from-testing-to-tuning/#reinforcement-fine-tuning) in [From Testing to Tuning]({{site.baseurl}}/advanced-techniques/from-testing-to-tuning/). 
+      A form of [Reinforcement Learning](#reinforcement-learning) tailored for [Tuning](#tuning) purposes. See the discussion of [Reinforcement Fine Tuning]({{site.baseurl}}/advanced-techniques/from-testing-to-tuning/#reinforcement-fine-tuning) in [From Testing to Tuning]({{site.baseurl}}/advanced-techniques/from-testing-to-tuning/). 
 
   - name: Reinforcement Learning
     description: 
@@ -478,15 +550,15 @@ terms:
       In the generative AI context, RL is a popular tool in the suite of model [Tuning](#tuning) processes that are used to improve model performance in various ways. In particular, [Reinforcement Learning with Human Feedback](#reinforcement-learning-with-human-feedback) (RLHF) is a popular technique for [Adaptation](#adaptation) and [Alignment](#alignment). A new technique called [Direct Preference Optimization](#direct-preference-optimization) (DPO) has largely replaced RL in many applications.
 
 
-      See also the discussion of [Reinforcement Fine Tuning]({{site.baseurl}}/advanced-techniques/from-testing-to-tuning/#reinforcement-fine-tuning) in [From Testing to Tuning]({{site.baseurl}}/advanced-techniques/from-testing-to-tuning/), which describes RL in more detail. 
+      See also the discussion of [Reinforcement Fine Tuning]({{site.baseurl}}/advanced-techniques/from-testing-to-tuning/#reinforcement-fine-tuning) in [From Testing to Tuning]({{site.baseurl}}/advanced-techniques/from-testing-to-tuning/), which describes RL more generally. 
 
   - name: Reinforcement Learning with Human Feedback
     description: 
-      A [Reinforcement Learning](#reinforcement-learning) introduced by OpenAI that uses human data to train a reward model, which is then used with RL to improve the training of the [Generative AI Model](#generative-ai-model). This is an expensive process, because of the expense of acquiring human generated, often expert, data. 
+      A form of [Reinforcement Learning](#reinforcement-learning) introduced by OpenAI that uses human data to train a reward model, which is then used with RL to improve the training of the [Generative AI Model](#generative-ai-model). This is an expensive process, because of the expense of acquiring human generated, often expert, data. 
 
   - name: Reinforcement Learning with Verifiable Rewards
     description: 
-      A [Reinforcement Learning](#reinforcement-learning) approach for LLMs where the [Response](#response) from a model during an RL step can be verified externally. For example, does the generated code compile and pass existing unit tests? See [Awesome RLVR](https://github.com/opendilab/awesome-RLVR){:target="_blank"} for more details.
+      A form of [Reinforcement Learning](#reinforcement-learning) for LLMs where the [Response](#response) from a model during an RL step can be verified externally. For example, does the generated code compile and pass existing unit tests? See [Awesome RLVR](https://github.com/opendilab/awesome-RLVR){:target="_blank"} for more details.
 
   - name: Repeatable
     description: 
@@ -539,7 +611,9 @@ terms:
 
   - name: Side Effect
     description: 
-      Reading and/or writing [State](#state) shared outside a [Unit](#unit), i.e., a [Function](#function) with other functions. If a [Component](#component) contains unit that perform side effects, then the component itself is considered to perform side effects. See also [Determinism](#determinism).
+      Reading and/or writing [State](#state) shared outside a [Unit](#unit), i.e., a [Function](#function) with other functions. If a [Component](#component) contains unit that perform side effects, then the component itself is considered to perform side effects. 
+
+      See also [Determinism](#determinism) and [Stochastic](#stochastic).
 
   - name: Social Responsibility
     description: 
@@ -547,7 +621,7 @@ terms:
 
   - name: Specification-Driven Development
     description: 
-      Abbreviated _SDD_ and also known as _Spec-Driven Development_. In our context, this refers to [an idea introduced by GitHub and Microsoft](https://the-ai-alliance.github.io/ai-application-testing/references/#specification-driven-development){:target="sdd"}, that we should structure code generation [Prompts](#prompt) in a more-precise format to ensure we get the code [Responses](#response) we need. The argument is that many models are already perfectly capable of generating this code, but they are &ldquo;literal minded&rdquo; and need to be told precisely what is needed from them.
+      Abbreviated _SDD_ and also known as _Spec-Driven Development_. In our context, this refers to an [idea introduced by GitHub and Microsoft](https://the-ai-alliance.github.io/ai-application-testing/references/#specification-driven-development){:target="sdd"}, that we should structure code generation [Prompts](#prompt) in a more-precise format to ensure we get the code [Responses](#response) we need. The argument is that many models are already perfectly capable of generating this code, but they are &ldquo;literal minded&rdquo; and need to be told precisely what is needed from them.
 
 
       We discuss SDD at length in the [Specification-Driven Development](https://the-ai-alliance.github.io/ai-application-testing/references/#specification-driven-development){:target="sdd"} chapter of [Testing Generative AI Applications](https://the-ai-alliance.github.io/ai-application-testing/){:target="tgaa"}. SDD is similar in its goals to [Test-Driven Development](#test-driven-development), although arguably closer to the emphasis in [Behavior-Driven Development](#behavior-driven-development).
@@ -565,7 +639,10 @@ terms:
 
   - name: Stochastic
     description: 
-      The behavior of a system where observed values are governed by a random probability distribution. For example, when flipping a coin repeatedly, the observed values, heads or tails, are governed by a distribution that predicts 50% of the time heads will be observed and 50% of the time tails will be observed, assuming a _fair coin_ (not weighted on one side or the other). The value you observe for any given flip is random; you can't predict exactly which possibility will happen, only that there is an equal probability of heads or tails. After performing more and more flips, the total count of heads and tails should be very close to equal. See also [Probabilities and Statistics](#probabilities-and-statistics).
+      The behavior of a system where observed values are governed by a random probability distribution. For example, when flipping a coin repeatedly, the observed values, heads or tails, are governed by a distribution that predicts 50% of the time heads will be observed and 50% of the time tails will be observed, assuming a _fair coin_ (not weighted on one side or the other). The value you observe for any given flip is random; you can't predict exactly which possibility will happen, only that there is an equal probability of heads or tails. After performing more and more flips, the total count of heads and tails should be very close to equal.  Hence such systems are not [Deterministic](#deterministic).
+
+
+      See also [Probabilities and Statistics](#probabilities-and-statistics).
 
   - name: Supervised Fine Tuning
     description: 
@@ -577,7 +654,7 @@ terms:
 
   - name: Synthetic Data Generation
     description: 
-      An important technique for creating data sets for evaluation, training, tuning, and other purposes when _real_ data sets for the same purpose don't exist or are not usable due to legal or other restrictions. Many techniques exist for synthesizing data. One challenge is to ensure the synthetic data meets quality and relevance requirements.
+      An important technique for creating data sets for [Evaluation](#evaluation) (e.g., [Benchmarks](#benchmark)), [Training](#training), [Tuning](#tuning), and other purposes when _real_ data sets for the same purpose don't exist or are not usable due to legal or other restrictions. Many techniques exist for synthesizing data. One challenge is to ensure the synthetic data meets quality and relevance requirements.
 
   - name: System Prompt
     description: 
@@ -585,7 +662,7 @@ terms:
 
   - name: Taxonomy
     description: 
-      Used in the context of [Evaluations](#evaluation), _taxonomy_ is used to refer to how categories are defined for known risks, other safety concerns, and other areas where detection or measurement of behaviors is desirable.
+      A widely used term (of course). In the context of [Evaluations](#evaluation), _taxonomy_ refers to how categories are defined for known risks, other safety concerns, and other areas where detection or measurement of behaviors is desirable.
 
   - name: Teacher Model
     description: 
@@ -622,7 +699,7 @@ terms:
 
   - name: Token
     description: 
-      For [Large Language Models](#large-language-model), the training texts and query [Prompts](#prompt) are split into tokens, usually whole words or fractions according to a vocabulary of tens of thousands of tokens that can include common single characters, several characters, and &ldquo;control&rdquo; tokens (like &ldquo;end of input&rdquo;). A rule of thumb is a corpus will parse into roughly 1.5 times the number of tokens as it has words.
+      For [Large Language Models](#large-language-model), the training texts and query [Prompts](#prompt) are split into tokens, usually whole words or fractions according to a vocabulary of tens of thousands of tokens that can include common single characters, several characters, and &ldquo;control&rdquo; tokens (like &ldquo;end of input&rdquo;). A rule of thumb is a corpus of _N_ words will parse into roughly _1.5 * N_ tokens.
 
   - name: Training
     description: 
@@ -633,7 +710,7 @@ terms:
 
   - name: Trust and Safety
     description: 
-      An umbrella term for concerns, processes, and tools to ensure trustworthiness and safety of [AI Systems](#ai-system). See the discussion [What We Mean by Trust and Safety](https://the-ai-alliance.github.io/trust-safety-user-guide/introduction/#what-we-mean-by-trust-and-safety){:target="t_s"} in The AI Alliance [Trust and Safety User Guide](https://the-ai-alliance.github.io/trust-safety-user-guide/){:target="tsug"}.
+      An umbrella term for concerns, processes, and tools to ensure trustworthiness and safety of [AI Systems](#ai-system). See the discussion [What We Mean by Trust and Safety](https://the-ai-alliance.github.io/trust-safety-user-guide/introduction/#what-we-mean-by-trust-and-safety){:target="t_s"} in The AI Alliance [Trust and Safety User Guide](https://the-ai-alliance.github.io/trust-safety-user-guide/){:target="tsug"}. [Evaluations](#evaluation), such as [Benchmarks](#benchmark), are often used to enforce trust and safety requirements.
 
   - name: Tuning
     description: 
@@ -666,7 +743,7 @@ terms:
 
   - name: Unlabeled Data
     description: 
-      Data without labels indicating expected &ldquo;information&rdquo; about the data, such as objects in images or themes in text examples. Massive sets of unlabeled data are used for [Training](#training) raw [Generative AI Models](#generative-ai-models), while [Labeled Data](#labeled-data) is typically used for [Tuning](#tuning) to improve those models to meet specific requirements.
+      A [Data Set](#data-set) where the data items don't have labels indicating expected &ldquo;information&rdquo; that a model would be expected to determine from the data, such as finding objects in images, themes in text examples, and classifying emails as _SPAM_ or not _SPAM_. Massive unlabeled data sets are used for [Training](#training) raw [Generative AI Models](#generative-ai-models), while [Labeled Data](#labeled-data) is typically used for [Tuning](#tuning) to create improved models that meet specific requirements.
 
   - name: Vibe Coding
     description: 
