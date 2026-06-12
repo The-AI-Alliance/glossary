@@ -179,11 +179,11 @@ terms:
 
   - name: Data Set
     description: 
-      Sometimes written _dataset_, a collection of data items used for training, evaluation, etc. Usually, a given data set has a schema (which may simply be &ldquo;unstructured text&rdquo;) and some metadata in the form of a [Data Set Card](#data-set-card) that typically includes information about provenance, license for use (which may specify disallowed uses), target uses, transformations and filters applied, etc. [\[1\]](#mlc).  (We use &ldquo;data set&rdquo; in this website, but &ldquo;dataset&rdquo; is a common spelling, including at [Hugging Face](https://huggingface.co/){:target="hf"}.) 
+      A collection of data items used for training, evaluation, etc. Usually, a given data set has a schema (which may simply be &ldquo;unstructured text&rdquo;) and some metadata in the form of a [Data Set Card](#data-set-card) that typically includes information about provenance, license for use, target and possibly restricted applications, transformations and filters applied, etc. (We use &ldquo;data set&rdquo; in this website, but &ldquo;dataset&rdquo; is a common spelling, including at [Hugging Face](https://huggingface.co/){:target="hf"}.)[\[1\]](#mlc).
 
   - name: Croissant
     description:
-      [Croissant](https://github.com/mlcommons/croissant){:target="croissant"} is a format (schema) for defining the metadata for [Data Sets](#data-set). It is a widely-used, de facto standard for dataset metadata.
+      A format (schema) for defining the metadata for [Data Sets](#data-set). It is a widely-used, de facto standard for dataset metadata. ([website](https://github.com/mlcommons/croissant){:target="croissant"})
 
 
       See also [Data Set Card](#data-set-card).
@@ -243,7 +243,7 @@ terms:
   - name: Evaluation Card
     description:
 
-      A description of an [Evaluation](#evaluation) in a standardized format (schema), which makes machine processing easier and provides examples for creators of cards for new evaluations and instances of running them against particular models. There isn't an official standard format at this time, but the [EvalEval Coalition](https://evalevalai.com/){:target="evaleval"} is defining a standard schema for evaluation cards, and it has started a [catalog](https://evalcards.evalevalai.com/){:target="evaleval-catalog"} of cards. For information about EvalEval, see the description in the [AI Trust and Safety User Guide](https://the-ai-alliance.github.io/trust-safety-user-guide/references/#evaleval-coalition){:target="tsug"}.
+      A description of an [Evaluation](#evaluation) in a standardized format (schema), which makes machine processing easier and provides examples for creators of cards for new evaluations and instances of running them against particular models. There isn't an official standard format at this time, but the [EvalEval Coalition](https://evalevalai.com/){:target="evaleval"} is defining a standard schema for evaluation cards, and it has started a [catalog](https://evalcards.evalevalai.com/){:target="evaleval-catalog"} of cards. For more information about EvalEval, see the description in the [AI Trust and Safety User Guide](https://the-ai-alliance.github.io/trust-safety-user-guide/references/#evaleval-coalition){:target="tsug"}.
 
 
       See also [Data Set Card](#data-set-card) and [Model Card](#model-card).
